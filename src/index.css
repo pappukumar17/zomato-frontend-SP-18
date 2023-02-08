@@ -17,6 +17,10 @@ code {
   padding: 0;
   box-sizing: border-box;
 }
+.line{
+  border-bottom: 3px solid red ;
+  width: 100%;
+}
 
 @media (min-width: 1401px) {
   .custom-container {
