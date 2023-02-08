@@ -441,28 +441,36 @@
     }
 
     .zomato-heading {
-        margin: 0 auto;
-        font-size: 47px;
+        margin: 10px auto;
+        font-size: 30px;
+        font-weight: 500;
         letter-spacing: 0.03em;
+        text-align: center;
     }
 
     .zomato-paragraph {
-        width: 58%;
+        width: 100%;
         font-weight: 300;
         font-size: 16px;
         letter-spacing: 0.03em;
+        text-align: center;
     }
 
     .contact {
         display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         width: 100%;
     }
 
     .contact-1 {
         display: flex;
+        justify-content: space-between;
         width: 100%;
-        margin-top: 2%;
+        align-items: center;
+        margin: 10px auto;
     }
+
 
     .phone {
         margin-left: 6%;
@@ -480,7 +488,9 @@
     }
 
     .email-1 {
-        width: 50%;
+        width: 60%;
+        margin: 0 auto;
+        margin-left: 11%;
     }
 
     .email-1 input {
@@ -488,20 +498,17 @@
     }
 
     .email-2 {
-        margin-left: 5%;
         width: 40%;
+        margin-left: 5%;
     }
 
-    .email-2 button {
-        height: 100%;
-    }
 
     .download-link-1 {
         display: flex;
-        width: 75%;
+        width: 65%;
         justify-content: space-between;
         align-items: center;
-        margin-left: 0.2%;
+        margin: 0 auto;
     }
 
     .android {
@@ -532,6 +539,7 @@
         margin-top: 2%;
         font-size: 15px;
         letter-spacing: 0.02em;
+        text-align: center;
     }
 
 
@@ -580,36 +588,37 @@
     }
 
     .right-part {
-        width: 90%;
+        width: 98%;
     }
 
     .zomato-heading {
-        margin: 0 auto;
-        font-size: 47px;
+        margin: 10px auto;
+        font-size: 30px;
+        font-weight: 500;
         letter-spacing: 0.03em;
+        text-align: center;
     }
 
     .zomato-paragraph {
-        width: 70%;
+        width: 100%;
         font-weight: 300;
         font-size: 16px;
         letter-spacing: 0.03em;
+        text-align: center;
     }
 
     .contact {
         display: flex;
+        justify-content: space-evenly;
         width: 100%;
     }
 
     .contact-1 {
         display: flex;
-        width: 100%;
-        margin-top: 2%;
-    }
-
-    .phone {
-        margin-left: 6%;
-        color: black !important;
+        justify-content: space-between;
+        width: 95%;
+        align-items: center;
+        margin: 10px auto;
     }
 
     .radio-email {
@@ -623,7 +632,9 @@
     }
 
     .email-1 {
-        width: 50%;
+        width: 60%;
+        margin: 0 auto;
+        margin-left: 11%;
     }
 
     .email-1 input {
@@ -631,8 +642,8 @@
     }
 
     .email-2 {
-        margin-left: 5%;
         width: 40%;
+        margin-left: 5%;
     }
 
     .email-2 button {
@@ -641,11 +652,8 @@
 
     .download-link-1 {
         display: flex;
-        width: 88%;
+        width: 60%;
         margin: 0 auto;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 0.2%;
     }
 
     .android {
@@ -658,14 +666,14 @@
 
     .android-image-1 {
         object-fit: contain;
-        width: 9rem;
+        width: 8rem;
         overflow: hidden;
         position: absolute;
     }
 
     .ios-image-1 {
         object-fit: contain;
-        width: 9rem;
+        width: 8rem;
         overflow: hidden;
         position: absolute;
     }
@@ -676,6 +684,7 @@
         margin-top: 2%;
         font-size: 15px;
         letter-spacing: 0.02em;
+        text-align: center;
     }
 
 

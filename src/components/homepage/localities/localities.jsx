@@ -6,7 +6,6 @@ import { AiFillCaretRight } from "react-icons/ai";
 function localities() {
     return (
         <>
-            <div className="custom-container">
                 <div className="main-localities">
                     <h1 className="main-heading">Popular localities in and around Delhi NCR</h1>
                     <div className="localities">
@@ -51,7 +50,6 @@ function localities() {
                         </div></a>
                     </div>
                 </div>
-            </div>
         </>
 
 

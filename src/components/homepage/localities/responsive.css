@@ -70,7 +70,7 @@
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .main-heading {
-        width: 100%;
+        width: 96%;
         margin: 0 auto;
         text-align: left;
         font-weight: 400;
@@ -79,7 +79,7 @@
     }
 
     .main-localities {
-        width: 88%;
+        width: 92%;
         margin: auto;
         margin-top: 7%;
     }
@@ -139,7 +139,7 @@
 @media (min-width: 768px) and (max-width: 992px) {
 
     .main-heading {
-        width: 100%;
+        width: 98%;
         margin: 0 auto;
         text-align: left;
         font-weight: 400;
@@ -148,7 +148,7 @@
     }
 
     .main-localities {
-        width: 88%;
+        width: 90%;
         margin: auto;
         margin-top: 7%;
     }
@@ -188,6 +188,10 @@
         margin-top: 3%;
         font-weight: 350;
         font-style: normal;
+    }
+
+    .areas{
+        padding:4px 5px ;
     }
 
     .areas-name {
@@ -208,7 +212,7 @@
 @media (min-width: 576px) and (max-width: 767px) {
 
     .main-heading {
-        width: 100%;
+        width: 95%;
         margin: 0 auto;
         text-align: left;
         font-weight: 400;
@@ -217,7 +221,7 @@
     }
 
     .main-localities {
-        width: 88%;
+        width: 95%;
         margin: auto;
         margin-top: 7%;
     }
@@ -251,12 +255,19 @@
         color: black;
     }
 
+    .areas{
+        padding:4px 5px ;
+    }
+
     .areas-heading {
-        font-size: 21px;
+        font-size: 20px;
         margin-left: 3%;
         margin-top: 3%;
         font-weight: 350;
         font-style: normal;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
 
     .areas-name {

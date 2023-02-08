@@ -22,7 +22,7 @@
         display: flex;
         justify-content: left;
         margin-bottom: 25px;
-        width: 80%;
+        width: 90%;
         margin-bottom: 3% !important;
         margin: 0 auto;
     }
@@ -61,7 +61,7 @@
     .information {
         display: flex;
         justify-content: space-between;
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
     }
 
@@ -167,7 +167,7 @@
     }
 
     .footer-bottom {
-        width: 80%;
+        width: 90%;
         margin: auto;
         color: #4f4f4f;
         font-size: 14.5px;

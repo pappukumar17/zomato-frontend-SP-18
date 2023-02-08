@@ -6,7 +6,6 @@ import '../category/responsive.css'
 function category() {
     return (
         <>
-            <div className="custom-container">
                 <div className="category">
                     <Link href="/" className="anchor">
                         <div className="order">
@@ -42,7 +41,6 @@ function category() {
                         </div>
                     </Link>
                 </div>
-            </div>
         </>
 
     )

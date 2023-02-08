@@ -6,7 +6,6 @@ const { Panel } = Collapse;
 
 const CollapsePanel = () => (
     <>
-        <div className="custom-container">
         <div className="main-container">
         <h1 className="collapse-heading">Explore options near me</h1>
         <Collapse bordered={false} defaultActiveKey={['1']} expandIconPosition="right">
@@ -30,7 +29,7 @@ const CollapsePanel = () => (
             </Panel>
         </Collapse>
     </div>
-        </div>
+
   </>
 
 );
