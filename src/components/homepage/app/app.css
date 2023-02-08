@@ -1,0 +1,145 @@
+
+.main-1 {
+    padding: 80px 0;
+    margin-top: 8%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #FEFBF6;
+}
+
+.left-part {
+    width: 45%;
+    display: block;
+}
+
+.left-part img {
+    width: 40%;
+    margin-left: 50%;
+    margin-top: 10%;
+    object-fit: contain;
+}
+
+.right-part {
+    width: 55%;
+    display: block;
+}
+
+.zomato-heading {
+    font-size: 47px;
+    letter-spacing: 0.03em;
+}
+
+.zomato-paragraph {
+    width: 58%;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+}
+
+.contact {
+    display: flex;
+    width: 50%;
+}
+
+.contact-1 {
+    display: flex;
+    width: 80%;
+    margin-top: 2%;
+}
+
+.phone {
+    margin-left: 6%;
+    color: black !important;
+}
+
+.radio-email {
+    font-weight: 300 !important;
+    font-size: 17px;
+}
+
+.radio-phone {
+    font-weight: 300 !important;
+    font-size: 17px;
+}
+
+.email-1 {
+    width: 45%;
+    height: 100%;
+}
+
+.email-2 {
+    margin-left: 5%;
+    width: 40%;
+}
+
+.email-2 button{
+    height: 100%;
+}
+
+.download-link-1 {
+    display: flex;
+    width: 41%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 0.2%;
+}
+
+.android {
+    width: 100%;
+}
+
+.ios {
+    width: 100%;
+}
+
+.android-image-1 {
+    object-fit: fill;
+    width: 9rem;
+    overflow: hidden;
+    position: absolute;
+}
+
+.ios-image-1 {
+    object-fit: fill;
+    width: 9rem;
+    overflow: hidden;
+    position: absolute;
+}
+
+.download-app {
+    font-weight: 350;
+    color: #9c9c9c;
+    margin-top: 2%;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+}
+
+
+/* ant design */
+
+.ant-radio-checked .ant-radio-inner {
+    background-color: white !important;
+    border-color: red !important;
+    border: 9px solid red !important;
+}
+
+.ant-radio-checked .ant-radio-inner:after {
+    border-color: red !important;
+    background-color: white !important;
+}
+
+.ant-radio:hover .ant-radio-inner {
+    background-color: white !important;
+    border: 8px solid red !important;
+}
+
+.ant-radio-checked .ant-radio-inner:focus {
+    background-color: red !important;
+}
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+.main-card {
+    box-shadow: 0px 4px 5px 3px rgb(232, 232, 232);
+    margin-bottom: 22px;
+}
+
+.card-heading {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+}
+
+.card-paragraph {
+    font-size: 18px;
+    font-weight: 300 !important;
+    color: #4f4f4f;
+    letter-spacing: 0.04em;
+}
+
+.card-report {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 550;
+    color: #ef4f5f;
+    letter-spacing: 0.04em;
+}
+
+
+
+

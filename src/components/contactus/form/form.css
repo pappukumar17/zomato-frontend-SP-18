@@ -1,0 +1,220 @@
+.help-form {
+    width: 70%;
+    margin: auto;
+}
+
+.box {
+    height: 42px;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    margin-top: 12px;
+}
+
+.box-text-area {
+    height: 200px;
+    font-size: 17px !important;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    margin-top: 12px;
+}
+
+.login-form-button {
+    width: 160px;
+    height: 44px;
+    background-color: #ef4f5f;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@media (max-width: 320px) {
+
+    .help-form {
+        width: 70%;
+        margin: auto;
+    }
+
+    .box {
+        height: 42px;
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        margin-top: 8px;
+    }
+
+    .box-text-area {
+        height: 200px;
+        font-size: 17px !important;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        margin-top: 8px;
+    }
+
+    .login-form-button {
+        width: 160px;
+        height: 44px;
+        background-color: #ef4f5f;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+@media (min-width: 321px) and (max-width:380px) {
+
+    .help-form {
+        width: 80%;
+        margin: auto;
+    }
+
+    .box {
+        height: 42px;
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        margin-top: 8px;
+    }
+
+    .box-text-area {
+        height: 200px;
+        font-size: 17px !important;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        margin-top: 8px;
+    }
+
+    .login-form-button {
+        width: 160px;
+        height: 44px;
+        background-color: #ef4f5f;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+@media (min-width:381px) and (max-width:768px) {
+
+    .help-form {
+        width: 90%;
+        margin: auto;
+    }
+
+    .box {
+        height: 42px;
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        margin-top: 8px;
+    }
+
+    .box-text-area {
+        height: 200px;
+        font-size: 17px !important;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        margin-top: 8px;
+    }
+
+    .login-form-button {
+        width: 160px;
+        height: 44px;
+        background-color: #ef4f5f;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+@media (min-width:769px) and (max-width:992px) {
+
+    .help-form {
+        width: 70%;
+        margin: auto;
+    }
+
+    .box {
+        height: 42px;
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        margin-top: 12px;
+    }
+
+    .box-text-area {
+        height: 200px;
+        font-size: 17px !important;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        margin-top: 12px;
+    }
+
+    .login-form-button {
+        width: 160px;
+        height: 44px;
+        background-color: #ef4f5f;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+@media (min-width:993px) and (max-width:1200px) {
+
+    .help-form {
+        width: 70%;
+        margin: auto;
+    }
+
+    .box {
+        height: 42px;
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        margin-top: 12px;
+    }
+
+    .box-text-area {
+        height: 200px;
+        font-size: 17px !important;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        margin-top: 12px;
+    }
+
+    .login-form-button {
+        width: 160px;
+        height: 44px;
+        background-color: #ef4f5f;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+@media (min-width:1200px) and (max-width:1400px) {
+
+    .help-form {
+        width: 70%;
+        margin: auto;
+    }
+
+    .box {
+        height: 42px;
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        margin-top: 12px;
+    }
+
+    .box-text-area {
+        height: 200px;
+        font-size: 17px !important;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        margin-top: 12px;
+    }
+
+    .login-form-button {
+        width: 160px;
+        height: 44px;
+        background-color: #ef4f5f;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}

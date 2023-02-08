@@ -1,0 +1,1604 @@
+/* CSS FOR NAVBAR */
+
+.body {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.homepage-header {
+    width: 100%;
+    overflow: hidden;
+    height: 63vh;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#membership {
+    background-color: white;
+}
+
+.navlink-image {
+    display: none;
+}
+
+.main-head {
+    margin-top: 60px;
+}
+
+.header-image {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: -105px;
+    object-fit: cover;
+}
+
+.header-image img {
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    opacity: 1;
+    transition: all 1.4s ease 0s;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    width: 300px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: -15px;
+}
+
+.head h3 {
+    font-size: 2.1rem;
+    color: whitesmoke;
+    font-weight: 400;
+    margin-top: 3%;
+}
+
+.search {
+    display: flex;
+    width: 52.5vw;
+    align-items: center;
+    border-radius: 10px;
+    background: white;
+    padding: 5px 4px;
+    margin-top: 2%;
+    height: 7vh;
+    font-weight: 350;
+    font-style: normal;
+}
+
+.logo-heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px !important;
+    font-weight: 400 !important;
+}
+
+.zomato-name-1 {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.search-para {
+    margin-top: 6%;
+}
+
+.search-option {
+    border: none;
+    color: gray;
+}
+
+.search .search-item-1 {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.search .search-item-1 p {
+    font-size: 15px;
+    font-weight: 400;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+.search-item-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.search .search-item-2 input {
+    display: flex;
+    outline: none;
+    border: none;
+    width: 90%;
+    padding-left: 12px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.search .search-item-2:first-child {
+    width: 30%;
+    color: rgb(240, 54, 76);
+}
+
+.search .search-item-1:last-child {
+    width: 70%;
+}
+
+.search-para-2 {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.navbar {
+    position: absolute;
+    height: 10vh;
+}
+
+.app-heading {
+    margin-left: 7%;
+    color: white;
+    font-size: 14px;
+    font-weight: 550;
+    font-style: normal;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+
+.app-heading-a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+.app-heading a:hover {
+    color: white;
+}
+
+.menu-icon-1 {
+    display: none;
+}
+
+.nav-elements {
+    width: 100%;
+}
+
+.nav-elements ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+    padding-right: 150px;
+}
+
+.nav-elements ul li:not(:last-child) {
+    margin-right: 60px;
+}
+
+.nav-elements ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 350;
+    font-style: normal;
+    letter-spacing: 0.04em;
+}
+
+.nav-elements ul a.active {
+    color: white;
+    position: relative;
+}
+
+
+@media (max-width: 320px) {
+
+    #membership {
+        background-color: white;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        padding-left: 1%;
+        width: 20%;
+        height: 5vh;
+    }
+
+    .menu-icon-bs {
+        position: absolute;
+        font-weight: bold;
+    }
+
+    .app-heading {
+        display: none;
+    }
+
+    .nav-elements {
+        position: absolute;
+        left: 0;
+        top: 0px;
+        height: 200vh !important;
+        width: 0px;
+        overflow-x: hidden !important;
+        transform: rotate(0deg);
+        height: calc(100vh - 60px) !important;
+        transition: transform 0.16s ease-in-out 0s;
+    }
+
+    .navlink-image {
+        margin-left: 48%;
+        width: 140px;
+        height: 40px;
+        float: left;
+        object-fit: contain;
+        margin-top: -38%;
+        margin-left: 160px;
+        display: block;
+    }
+
+    .active {
+        width: 400px;
+        background-color: white;
+    }
+
+    .nav-elements ul a.active {
+        color: #4f4f4f;
+        font-weight: 350;
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 35px;
+    }
+
+    .nav-elements ul {
+        display: flex;
+        flex-direction: column;
+        color: black;
+    }
+
+    .nav-elements ul li {
+        margin-right: unset;
+        margin-top: 22px;
+        color: black;
+    }
+
+
+    /* optimise all CSS */
+
+    header {
+        width: 100%;
+        height: 32vh;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .header-image img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        top: 75px;
+        height: 32vh;
+        object-fit: cover;
+        transform: scale(1.1);
+        transition: all 1.4s ease 0s;
+        background-color: black;
+    }
+
+    .logo {
+        width: 160px;
+        height: 30px;
+        object-fit: contain;
+        transform: none;
+        opacity: 1;
+        transition: all 1.4s ease 0s;
+    }
+
+    .main-head {
+        height: 53vh;
+    }
+
+    .logo-heading {
+        width: 364px;
+        height: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px !important;
+        font-weight: 450 !important;
+        text-align: center;
+        letter-spacing: 0.02em;
+        line-height: 32px;
+    }
+
+    .search {
+        margin-top: -12px;
+        width: 90%;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-item-1 {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .search-item-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .search-para {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        height: 20px;
+        margin-bottom: 22px;
+    }
+
+    .search-item-1 {
+        color: rgb(54, 54, 54);
+        width: 100%;
+        height: 7px;
+    }
+
+    .search-option {
+        width: auto;
+        text-align: left;
+        margin-left: 8px;
+        font-weight: 500;
+        color: black;
+        font-size: 15px;
+    }
+
+    .search .search-item-1 input {
+        color: rgb(54, 54, 54);
+    }
+
+    .search .search-item-2 input {
+        display: flex;
+        outline: none;
+        border: none;
+        width: 100%;
+        padding-left: 12px;
+        margin-top: 27px;
+        border-radius: 0.6rem;
+        text-align: left;
+        font-size: 12px;
+        font-weight: lighter;
+    }
+
+    .search-para-2 {
+        height: 40px;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 380px) {
+
+    #membership {
+        background-color: white;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        width: 30%;
+        margin-left: 20px;
+        margin-top: 10px;
+        height: 6vh;
+    }
+
+    .menu-icon-bs {
+        position: absolute;
+        font-weight: bold;
+    }
+
+    .app-heading {
+        display: none;
+    }
+
+    .nav-elements {
+        position: absolute;
+        left: 0;
+        top: 0px;
+        width: 0px;
+        padding-left: 2%;
+        overflow-x: hidden !important;
+        transform: rotate(0deg);
+        height: calc(100vh - 60px) !important;
+        transition: transform 0.16s ease-in-out 0s;
+    }
+
+    .navlink-image {
+        width: 140px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .active {
+        width: 100%;
+        background-color: white;
+    }
+
+    .nav-elements ul a.active {
+        color: #4f4f4f;
+        font-weight: 350;
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 35px;
+    }
+
+    .nav-elements ul {
+        display: flex;
+        flex-direction: column;
+        color: black;
+    }
+
+    .nav-elements ul li {
+        margin-right: unset;
+        margin-top: 22px;
+        color: black;
+    }
+
+    .homepage-header {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .header-image img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 67vh;
+        object-fit: cover;
+        transform: scale(1);
+        transition: all 1.4s ease 0s;
+        background-color: black;
+    }
+
+    .logo {
+        width: 160px;
+        object-fit: contain;
+        transform: none;
+        opacity: 1;
+        transition: all 1.4s ease 0s;
+    }
+
+    .logo-heading {
+        width: 80%;
+        font-size: 36px !important;
+        font-weight: 450 !important;
+        text-align: center;
+        letter-spacing: 0.02em;
+    }
+
+    .search {
+        margin-top: 12px;
+        width: 90%;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-item-1 {
+        margin-top: 10px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .search-item-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .location-marker {
+        display: none;
+    }
+
+    .search-para {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        height: 10px;
+        margin-bottom: 30px;
+    }
+
+    .search-item-1 {
+        color: rgb(54, 54, 54);
+        width: 100%;
+        height: 7px;
+    }
+
+    .search-option {
+        width: auto;
+        text-align: left;
+        margin-left: 8px;
+        font-weight: 500;
+        color: black;
+        font-size: 15px;
+    }
+
+    .search .search-item-1 input {
+        color: rgb(54, 54, 54);
+    }
+
+    .search .search-item-2 input {
+        display: flex;
+        outline: none;
+        border: none;
+        width: 100%;
+        padding-left: 12px;
+        margin-top: 27px;
+        border-radius: 0.6rem;
+        text-align: left;
+        font-size: 12px;
+        font-weight: lighter;
+    }
+
+    .search-para-2 {
+        height: 40px;
+    }
+}
+
+@media (min-width: 390px) and (max-width: 499px) {
+  
+    #membership {
+        background-color: white;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        width: 30%;
+        margin-left: 20px;
+        margin-top: 10px;
+        height: 6vh;
+    }
+
+    .menu-icon-bs {
+        position: absolute;
+        font-weight: bold;
+    }
+
+    .app-heading {
+        display: none;
+    }
+
+    .nav-elements {
+        position: absolute;
+        left: 0;
+        top: 0px;
+        width: 0px;
+        padding-left: 2%;
+        overflow-x: hidden !important;
+        transform: rotate(0deg);
+        height: calc(100vh - 60px) !important;
+        transition: transform 0.16s ease-in-out 0s;
+    }
+
+    .navlink-image {
+        width: 140px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .active {
+        width: 100%;
+        background-color: white;
+    }
+
+    .nav-elements ul a.active {
+        color: #4f4f4f;
+        font-weight: 350;
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 35px;
+    }
+
+    .nav-elements ul {
+        display: flex;
+        flex-direction: column;
+        color: black;
+    }
+
+    .nav-elements ul li {
+        margin-right: unset;
+        margin-top: 22px;
+        color: black;
+    }
+
+    .homepage-header {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .header-image img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 67vh;
+        object-fit: cover;
+        transform: scale(1);
+        transition: all 1.4s ease 0s;
+        background-color: black;
+    }
+
+    .logo {
+        width: 160px;
+        object-fit: contain;
+        transform: none;
+        opacity: 1;
+        transition: all 1.4s ease 0s;
+    }
+
+    .logo-heading {
+        width: 80%;
+        font-size: 36px !important;
+        font-weight: 450 !important;
+        text-align: center;
+        letter-spacing: 0.02em;
+    }
+
+    .search {
+        margin-top: 12px;
+        width: 90%;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-item-1 {
+        margin-top: 10px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .search-item-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .location-marker {
+        display: none;
+    }
+
+    .search-para {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        height: 10px;
+        margin-bottom: 30px;
+    }
+
+    .search-item-1 {
+        color: rgb(54, 54, 54);
+        width: 100%;
+        height: 7px;
+    }
+
+    .search-option {
+        width: auto;
+        text-align: left;
+        margin-left: 8px;
+        font-weight: 500;
+        color: black;
+        font-size: 15px;
+    }
+
+    .search .search-item-1 input {
+        color: rgb(54, 54, 54);
+    }
+
+    .search .search-item-2 input {
+        display: flex;
+        outline: none;
+        border: none;
+        width: 100%;
+        padding-left: 12px;
+        margin-top: 27px;
+        border-radius: 0.6rem;
+        text-align: left;
+        font-size: 12px;
+        font-weight: lighter;
+    }
+
+    .search-para-2 {
+        height: 40px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 576px) {
+
+    #membership {
+        background-color: white;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        width: 30%;
+        margin-left: 20px;
+        margin-top: 10px;
+        height: 6vh;
+    }
+
+    .menu-icon-bs {
+        position: absolute;
+        font-weight: bold;
+    }
+
+    .app-heading {
+        display: none;
+    }
+
+    .nav-elements {
+        position: absolute;
+        left: 0;
+        top: 0px;
+        width: 0px;
+        padding-left: 2%;
+        overflow-x: hidden !important;
+        transform: rotate(0deg);
+        height: calc(100vh - 60px) !important;
+        transition: transform 0.16s ease-in-out 0s;
+    }
+
+    .navlink-image {
+        width: 140px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .active {
+        width: 100%;
+        background-color: white;
+    }
+
+    .nav-elements ul a.active {
+        color: #4f4f4f;
+        font-weight: 350;
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 35px;
+    }
+
+    .nav-elements ul {
+        display: flex;
+        flex-direction: column;
+        color: black;
+    }
+
+    .nav-elements ul li {
+        margin-right: unset;
+        margin-top: 22px;
+        color: black;
+    }
+
+    .homepage-header {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .header-image img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 67vh;
+        object-fit: cover;
+        transform: scale(1);
+        transition: all 1.4s ease 0s;
+        background-color: black;
+    }
+
+    .logo {
+        width: 160px;
+        object-fit: contain;
+        transform: none;
+        opacity: 1;
+        transition: all 1.4s ease 0s;
+    }
+
+    .logo-heading {
+        width: 80%;
+        font-size: 36px !important;
+        font-weight: 450 !important;
+        text-align: center;
+        letter-spacing: 0.02em;
+    }
+
+    .search {
+        margin-top: 12px;
+        width: 90%;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-item-1 {
+        margin-top: 10px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .search-item-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .location-marker {
+        display: none;
+    }
+
+    .search-para {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        height: 10px;
+        margin-bottom: 30px;
+    }
+
+    .search-item-1 {
+        color: rgb(54, 54, 54);
+        width: 100%;
+        height: 7px;
+    }
+
+    .search-option {
+        width: auto;
+        text-align: left;
+        margin-left: 8px;
+        font-weight: 500;
+        color: black;
+        font-size: 15px;
+    }
+
+    .search .search-item-1 input {
+        color: rgb(54, 54, 54);
+    }
+
+    .search .search-item-2 input {
+        display: flex;
+        outline: none;
+        border: none;
+        width: 100%;
+        padding-left: 12px;
+        margin-top: 27px;
+        border-radius: 0.6rem;
+        text-align: left;
+        font-size: 12px;
+        font-weight: lighter;
+    }
+
+    .search-para-2 {
+        height: 40px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+
+    #membership {
+        background-color: white;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        width: 30%;
+        margin-left: 20px;
+        margin-top: 10px;
+        height: 6vh;
+    }
+
+    .menu-icon-bs {
+        position: absolute;
+        font-weight: bold;
+    }
+
+    .app-heading {
+        display: none;
+    }
+
+    .nav-elements {
+        position: absolute;
+        left: 0;
+        top: 0px;
+        width: 0px;
+        padding-left: 2%;
+        overflow-x: hidden !important;
+        transform: rotate(0deg);
+        height: calc(100vh - 60px) !important;
+        transition: transform 0.16s ease-in-out 0s;
+    }
+
+    .navlink-image {
+        width: 140px;
+        object-fit: contain;
+        margin-top: -15%;
+        margin-left: 480px;
+        display: block;
+    }
+
+    .active {
+        width: 770px;
+        background-color: white;
+    }
+
+    .nav-elements ul a.active {
+        color: #4f4f4f;
+        font-weight: 350;
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 35px;
+    }
+
+    .nav-elements ul {
+        display: flex;
+        flex-direction: column;
+        color: black;
+    }
+
+    .nav-elements ul li {
+        margin-right: unset;
+        margin-top: 22px;
+        color: black;
+    }
+
+
+    /* optimise all CSS */
+
+    .homepage-header {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .header-image img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 65vh;
+        object-fit: cover;
+        transform: scale(1.1);
+        transition: all 1.4s ease 0s;
+        background-color: black;
+    }
+
+    .logo {
+        width: 160px;
+        object-fit: contain;
+        transform: none;
+        opacity: 1;
+        transition: all 1.4s ease 0s;
+    }
+
+    .logo-heading {
+        width: 80%;
+        font-size: 36px !important;
+        font-weight: 450 !important;
+        text-align: center;
+        letter-spacing: 0.02em;
+    }
+
+    .search {
+        margin-top: 12px;
+        width: 90%;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-item-1 {
+        margin-top: 10px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .search-item-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .location-marker {
+        display: none;
+    }
+
+    .search-para {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        height: 20px;
+        margin-bottom: 40px;
+    }
+
+    .search-item-1 {
+        color: rgb(54, 54, 54);
+        width: 100%;
+        height: 7px;
+    }
+
+    .search-option {
+        width: auto;
+        text-align: left;
+        margin-left: 8px;
+        font-weight: 500;
+        color: black;
+        font-size: 15px;
+    }
+
+    .search .search-item-1 input {
+        color: rgb(54, 54, 54);
+    }
+
+    .search .search-item-2 input {
+        display: flex;
+        outline: none;
+        border: none;
+        width: 100%;
+        padding-left: 12px;
+        margin-top: 27px;
+        border-radius: 0.6rem;
+        text-align: left;
+        font-size: 12px;
+        font-weight: lighter;
+    }
+
+    .search-para-2 {
+        height: 40px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    #membership {
+        background-color: white;
+    }
+
+    .navbar {
+        width: 100%;
+        display: flex;
+    }
+
+    .app-heading {
+        color: white;
+        font-size: 14px;
+        margin-top: 1px;
+        font-weight: 550;
+        font-style: normal;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+    }
+
+    .app-heading-a {
+        text-decoration: none;
+        list-style: none;
+        color: white;
+    }
+
+    .app-heading a:hover {
+        color: white;
+    }
+
+    .menu-icon-1 {
+        display: none;
+    }
+
+    .nav-elements {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .nav-elements ul {
+        width: 103%;
+    }
+
+    .nav-elements ul a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        font-weight: 350;
+        font-style: normal;
+        letter-spacing: 0.04em;
+    }
+
+    .nav-elements ul a.active {
+        color: white;
+        position: relative;
+    }
+
+    .homepage-header {
+        width: 100%;
+        height: 55vh;
+        overflow: hidden;
+    }
+
+    .header-image img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+        transform: scale(1);
+        transition: all 1.4s ease 0s;
+        background-color: black;
+    }
+
+    .logo {
+        width: 300px;
+        margin: auto;
+        object-fit: contain;
+        transform: none;
+        opacity: 1;
+        transition: all 1.4s ease 0s;
+    }
+
+    .search {
+        display: flex;
+        width: 80%;
+        align-items: center;
+        border-radius: 10px;
+        background: white;
+        padding: 2px 2px;
+        font-weight: 350;
+        font-style: normal;
+    }
+
+    .logo-heading {
+        width: 80%;
+        text-align: center;
+        font-size: 36px !important;
+        font-weight: 400 !important;
+    }
+
+    .zomato-name-1 {
+        display: none;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .search-option {
+        border: none;
+        color: gray;
+    }
+
+    .search .search-item-1 {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .search .search-item-1 p {
+        font-size: 15px;
+        font-weight: 400;
+        margin-right: 10px;
+        padding-left: 10px;
+    }
+
+    .search-item-2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .search .search-item-2 input {
+        display: flex;
+        outline: none;
+        border: none;
+        width: 90%;
+        padding-left: 12px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .search .search-item-2:first-child {
+        width: 30%;
+        color: rgb(240, 54, 76);
+    }
+
+    .search .search-item-1:last-child {
+        width: 70%;
+    }
+
+    .search-para-2 {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+
+    #membership {
+        background-color: white;
+    }
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .app-heading {
+        color: white;
+        font-size: 14px;
+        font-weight: 550;
+        font-style: normal;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+        margin-bottom: 0;
+    }
+
+    .app-heading-a {
+        text-decoration: none;
+        list-style: none;
+        color: white;
+    }
+
+    .app-heading a:hover {
+        color: white;
+    }
+
+    .menu-icon-1 {
+        display: none;
+    }
+
+    .nav-elements ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-evenly;
+        position: relative;
+        width: 100%;
+        margin-left: 80px;
+        top: 10px;
+    }
+
+    .nav-elements ul li:not(:last-child) {
+        margin-left: 0px;
+    }
+
+    .nav-elements ul a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        font-weight: 350;
+        font-style: normal;
+        letter-spacing: 0.04em;
+    }
+
+    .nav-elements ul a.active {
+        color: white;
+        position: relative;
+    }
+
+    .main-head {
+        margin-top: 6%;
+    }
+
+    .homepage-header {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .header-image img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        object-fit: cover;
+        transform: scale(1.1);
+        transition: all 1.4s ease 0s;
+        background-color: black;
+    }
+
+    .logo {
+        width: 300px;
+        margin: auto;
+        object-fit: contain;
+        transform: none;
+        opacity: 1;
+        transition: all 1.4s ease 0s;
+    }
+
+    .search {
+        display: flex;
+        width: 773px;
+        align-items: center;
+        border-radius: 10px;
+        background: white;
+        padding: 2px 2px;
+        font-weight: 350;
+        font-style: normal;
+    }
+
+    .logo-heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 39px !important;
+        font-weight: 400 !important;
+    }
+
+    .zomato-name-1 {
+        display: none;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .search-para {
+        margin-top: 6%;
+    }
+
+    .search-option {
+        border: none;
+        color: gray;
+    }
+
+    .search .search-item-1 {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .search .search-item-1 p {
+        font-size: 15px;
+        font-weight: 400;
+        margin-right: 10px;
+        padding-left: 10px;
+    }
+
+    .search-item-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .search .search-item-2 input {
+        display: flex;
+        outline: none;
+        border: none;
+        width: 90%;
+        padding-left: 12px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .search .search-item-2:first-child {
+        width: 30%;
+        color: rgb(240, 54, 76);
+    }
+
+    .search .search-item-1:last-child {
+        width: 70%;
+    }
+
+    .search-para-2 {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+    #membership {
+        background-color: white;
+    }
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .app-heading {
+        color: white;
+        font-size: 14px;
+        font-weight: 550;
+        font-style: normal;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+        margin-bottom: 0;
+    }
+
+    .app-heading-a {
+        text-decoration: none;
+        list-style: none;
+        color: white;
+    }
+
+    .app-heading a:hover {
+        color: white;
+    }
+
+    .menu-icon-1 {
+        display: none;
+    }
+
+    .nav-elements ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-evenly;
+        position: relative;
+        width: 100%;
+        margin-left: 80px;
+        top: 10px;
+    }
+
+    .nav-elements ul li:not(:last-child) {
+        margin-left: 0px;
+    }
+
+    .nav-elements ul a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        font-weight: 350;
+        font-style: normal;
+        letter-spacing: 0.04em;
+    }
+
+    .nav-elements ul a.active {
+        color: white;
+        position: relative;
+    }
+
+    .main-head {
+        margin-top: 10%;
+    }
+
+    .homepage-header {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .header-image img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        object-fit: cover;
+        transform: scale(1.1);
+        transition: all 1.4s ease 0s;
+        background-color: black;
+    }
+
+    .logo {
+        width: 300px;
+        margin: auto;
+        object-fit: contain;
+        transform: none;
+        opacity: 1;
+        transition: all 1.4s ease 0s;
+    }
+
+    .search {
+        display: flex;
+        width: 773px;
+        align-items: center;
+        border-radius: 10px;
+        background: white;
+        padding: 2px 2px;
+        font-weight: 350;
+        font-style: normal;
+    }
+
+    .logo-heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 39px !important;
+        font-weight: 400 !important;
+    }
+
+    .zomato-name-1 {
+        display: none;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .search-para {
+        margin-top: 6%;
+    }
+
+    .search-option {
+        border: none;
+        color: gray;
+    }
+
+    .search .search-item-1 {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .search .search-item-1 p {
+        font-size: 15px;
+        font-weight: 400;
+        margin-right: 10px;
+        padding-left: 10px;
+    }
+
+    .search-item-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .search .search-item-2 input {
+        display: flex;
+        outline: none;
+        border: none;
+        width: 90%;
+        padding-left: 12px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .search .search-item-2:first-child {
+        width: 30%;
+        color: rgb(240, 54, 76);
+    }
+
+    .search .search-item-1:last-child {
+        width: 70%;
+    }
+
+    .search-para-2 {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+}

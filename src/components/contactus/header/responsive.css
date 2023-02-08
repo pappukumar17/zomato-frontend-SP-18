@@ -1,0 +1,633 @@
+@media (min-width: 1200px) and (max-width:1400px) {
+
+    /* CSS FOR NAVBAR */
+
+    .main-header {
+        margin: 10px;
+    }
+
+    #membership {
+        background-color: white;
+    }
+
+    .contact-navlink-image-1 {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .contact-navlink-image-2 {
+        display: none;
+    }
+
+    .contact-search {
+        display: flex;
+        width: 50%;
+        border: 1px solid #e8e8e8;
+        border-radius: 10px;
+        padding-left: 0;
+        background: white;
+        box-shadow: 0px 4px 10px 0px rgb(232, 232, 232);
+        background-color: #FFFFFF;
+        margin-bottom: 0;
+    }
+
+    .main-navbar {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .contact-menu-icon {
+        display: none;
+    }
+
+    .contact-search-para {
+        margin-top: 6%;
+    }
+
+    .contact-search-option {
+        border: none;
+        color: gray;
+    }
+
+    .contact-search .contact-search-item-1 {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .contact-search .contact-search-item-1 p {
+        font-size: 15px;
+        font-weight: 400;
+        margin-right: 10px;
+        padding-left: 10px;
+    }
+
+    .contact-search-item-2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .contact-search .contact-search-item-2 input {
+        display: flex;
+        outline: none;
+        border: none;
+        width: 90%;
+        padding-left: 12px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .contact-search .contact-search-item-2:first-child {
+        width: 30%;
+        color: rgb(240, 54, 76);
+    }
+
+    .contact-search .contact-search-item-1:last-child {
+        width: 70%;
+    }
+
+    .contact-search-para-2 {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .contact-navbar {
+        width: 100%;
+    }
+
+    .contact-container {
+        width: 100% !important;
+        display: block;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .contact-menu-icon-1 {
+        display: none !important;
+    }
+
+    .contact-nav-elements {
+        display: flex;
+        width: 15%;
+        list-style-type: none;
+        padding: 0;
+        justify-content: space-around;
+        margin-bottom: 0;
+    }
+
+    .contact-nav-elements a {
+        text-decoration: none;
+        font-size: 19px;
+        font-weight: 300;
+        font-style: normal;
+        letter-spacing: 0.04em;
+    }
+
+    .contact-nav-elements a.active {
+        color: #4f4f4f;
+        position: relative;
+    }
+
+    .contact-app-heading {
+        width: 10%;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .contact-li-1,
+    .contact-li-2 {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) and (max-width:1199px) {
+
+    /* CSS FOR NAVBAR */
+
+    .main-header {
+        margin: 10px;
+    }
+
+    #membership {
+        background-color: white;
+    }
+
+    .contact-navlink-image-1 {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .contact-navlink-image-2 {
+        display: none;
+    }
+
+    .contact-search {
+        display: flex;
+        width: 55%;
+        border: 1px solid #e8e8e8;
+        border-radius: 10px;
+        padding-left: 0;
+        background: white;
+        box-shadow: 0px 4px 10px 0px rgb(232, 232, 232);
+        background-color: #FFFFFF;
+        margin-bottom: 0;
+    }
+
+    .main-navbar {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .contact-menu-icon {
+        display: none;
+    }
+
+    .contact-search-para {
+        margin-top: 6%;
+    }
+
+    .contact-search-option {
+        border: none;
+        color: gray;
+    }
+
+    .contact-search .contact-search-item-1 {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .contact-search .contact-search-item-1 p {
+        font-size: 15px;
+        font-weight: 400;
+        margin-right: 10px;
+        padding-left: 10px;
+    }
+
+    .contact-search-item-2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .contact-search .contact-search-item-2 input {
+        display: flex;
+        outline: none;
+        border: none;
+        width: 90%;
+        padding-left: 12px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .contact-search .contact-search-item-2:first-child {
+        width: 30%;
+        color: rgb(240, 54, 76);
+    }
+
+    .contact-search .contact-search-item-1:last-child {
+        width: 70%;
+    }
+
+    .contact-search-para-2 {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .contact-navbar {
+        width: 100%;
+    }
+
+    .contact-container {
+        width: 100% !important;
+        display: block;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .contact-menu-icon-1 {
+        display: none !important;
+    }
+
+    .contact-nav-elements {
+        display: flex;
+        width: 15%;
+        list-style-type: none;
+        padding: 0;
+        justify-content: space-around;
+        margin-bottom: 0;
+    }
+
+    .contact-nav-elements a {
+        text-decoration: none;
+        font-size: 19px;
+        font-weight: 300;
+        font-style: normal;
+        letter-spacing: 0.04em;
+    }
+
+    .contact-nav-elements a.active {
+        color: #4f4f4f;
+        position: relative;
+    }
+
+    .contact-app-heading {
+        width: 10%;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .contact-li-1,
+    .contact-li-2 {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width:991px) {
+
+    /* CSS FOR NAVBAR */
+
+    .main-header {
+        margin: 10px;
+    }
+
+    #membership {
+        background-color: white;
+    }
+
+    .contact-navlink-image-1 {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .contact-navlink-image-2 {
+        display: none;
+    }
+
+    .contact-search {
+        display: flex;
+        width: 60%;
+        border: 1px solid #e8e8e8;
+        border-radius: 10px;
+        padding-left: 0;
+        background: white;
+        box-shadow: 0px 4px 10px 0px rgb(232, 232, 232);
+        background-color: #FFFFFF;
+        margin-bottom: 0;
+    }
+
+    .main-navbar {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .contact-menu-icon {
+        display: none;
+    }
+
+    .contact-search-para {
+        margin-top: 6%;
+    }
+
+    .contact-search-option {
+        border: none;
+        color: gray;
+    }
+
+    .contact-search .contact-search-item-1 {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .contact-search .contact-search-item-1 p {
+        font-size: 15px;
+        font-weight: 400;
+        margin-right: 10px;
+        padding-left: 10px;
+    }
+
+    .contact-search-item-2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-right: 10px;
+    }
+
+    .contact-search .contact-search-item-2 input {
+        display: flex;
+        outline: none;
+        border: none;
+        width: 90%;
+        padding-left: 12px;
+        font-size: 15px;
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .contact-search .contact-search-item-2:first-child {
+        width: 30%;
+        color: rgb(240, 54, 76);
+    }
+
+    .contact-search .contact-search-item-1:last-child {
+        width: 70%;
+    }
+
+    .contact-search-para-2 {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .contact-navbar {
+        width: 100%;
+    }
+
+    .contact-container {
+        width: 100% !important;
+        display: block;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .contact-menu-icon-1 {
+        display: none !important;
+    }
+
+    .contact-nav-elements {
+        display: flex;
+        width: 20%;
+        list-style-type: none;
+        padding: 0;
+        justify-content: space-around;
+        margin-bottom: 0;
+    }
+
+    .contact-nav-elements a {
+        text-decoration: none;
+        font-size: 19px;
+        font-weight: 300;
+        font-style: normal;
+        letter-spacing: 0.04em;
+    }
+
+    .contact-nav-elements a.active {
+        color: #4f4f4f;
+        position: relative;
+    }
+
+    .contact-app-heading {
+        width: 10%;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .contact-li-1,
+    .contact-li-2 {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) and (max-width:768px) {
+
+    #membership {
+        background-color: white;
+    }
+
+    .main-navbar {
+        display: flex;
+        width: 100%;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contact-navlink-image-1 {
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        margin-bottom: 0;
+    }
+
+    .contact-navlink-image-2 {
+        width: 20%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .contact-menu-icon {
+        display: block;
+        cursor: pointer;
+        padding-left: 2%;
+        width: 20%;
+    }
+
+    .menu-icon-bs {
+        position: absolute;
+        font-weight: bold;
+    }
+
+    .contact-navbar {
+        width: 100%;
+    }
+
+    .contact-menu-icon-1 {
+        display: block;
+    }
+
+
+    .contact-nav-elements {
+        position: absolute;
+        left: 0;
+        top: 0px;
+        width: 0px;
+        overflow-x: hidden !important;
+        transform: rotate(0deg);
+        transition: transform 0.16s ease-in-out 0s;
+        display: flex;
+        flex-direction: column;
+        padding-left: 2%;
+    }
+
+    .contact-nav-elements a {
+        text-decoration: none;
+        font-size: 19px;
+        font-weight: 300;
+        font-style: normal;
+        letter-spacing: 0.04em;
+    }
+
+    .contact-nav-elements a.Active {
+        color: #4f4f4f;
+        font-weight: 350;
+        font-size: 18px;
+    }
+
+    .contact-nav-elements li {
+        color: white;
+    }
+
+    .Active {
+        width: 100%;
+        background-color: white;
+        height: 100vh;
+    }
+
+    .contact-li-1 {
+        display: block;
+    }
+
+    .contact-li-2 {
+        display: block;
+    }
+
+    .contact-search {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    #membership {
+        background-color: white;
+    }
+
+    .main-navbar {
+        display: flex;
+        width: 100%;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contact-navlink-image-1 {
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        margin-bottom: 0;
+    }
+
+    .contact-navlink-image-2 {
+        width: 20%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .contact-menu-icon {
+        display: block;
+        cursor: pointer;
+        padding-left: 2%;
+        width: 20%;
+    }
+
+    .menu-icon-bs {
+        position: absolute;
+        font-weight: bold;
+    }
+
+    .contact-navbar {
+        width: 100%;
+    }
+
+    .contact-menu-icon-1 {
+        display: block;
+    }
+
+
+    .contact-nav-elements {
+        position: absolute;
+        left: 0;
+        top: 0px;
+        width: 0px;
+        overflow-x: hidden !important;
+        transform: rotate(0deg);
+        transition: transform 0.16s ease-in-out 0s;
+        display: flex;
+        flex-direction: column;
+        padding-left: 2%;
+    }
+
+    .contact-nav-elements a {
+        text-decoration: none;
+        font-size: 19px;
+        font-weight: 300;
+        font-style: normal;
+        letter-spacing: 0.04em;
+    }
+
+    .contact-nav-elements a.Active {
+        color: #4f4f4f;
+        font-weight: 350;
+        font-size: 18px;
+    }
+
+    .contact-nav-elements li {
+        color: white;
+    }
+
+    .Active {
+        width: 100%;
+        background-color: white;
+        height: 100vh;
+    }
+
+    .contact-li-1 {
+        display: block;
+    }
+
+    .contact-li-2 {
+        display: block;
+    }
+
+    .contact-search {
+        display: none;
+    }
+}

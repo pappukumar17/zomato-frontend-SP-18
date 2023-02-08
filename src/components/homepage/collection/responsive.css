@@ -1,0 +1,385 @@
+@media (min-width: 1200px) and (max-width: 1400px) {
+
+    .main-collection {
+        display: flex;
+        justify-content: space-between;
+        width: 89%;
+        margin: 0 auto;
+        margin-top: 3%;
+    }
+    
+    .collection-heading {
+        margin-top: 2%;
+        margin-bottom: 0.3%;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 35px;
+    }
+    
+    .collection-paragraph {
+        font-size: 19px;
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    .mobile-collection {
+        display: none;
+    }
+    
+    .city-collection {
+        margin-right: 1%;
+        margin-top: 5.4%;
+        font-weight: 550;
+        font-size: 17px;
+        font-style: normal;
+        letter-spacing: 0.02em;
+    }
+    
+    .city-collection a {
+        text-decoration: none;
+        color: rgb(238, 106, 121);
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    .city-collection a:hover {
+        color: rgb(238, 106, 121);
+    }
+    
+    .collection {
+        display: flex;
+        width: 89%;
+        margin: 0 auto;
+    }
+    
+    .collection-item {
+        border: 1px solid gainsboro;
+        width: 98%;
+        border-radius: 20px;
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    
+    .collection-item img {
+        width: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        object-fit: cover;
+        transition: all 1.4s ease 0s;
+    }
+    
+    .collection-anchor {
+        width: 100%;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .bottom-left {
+        position: absolute;
+        bottom: 26px;
+        left: 16px;
+        font-size: 18px;
+        color: white;
+    }
+    
+    .bottom-left1 {
+        position: absolute;
+        bottom: 2px;
+        left: 16px;
+        font-size: 18px;
+        color: white;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .main-collection {
+        display: flex;
+        justify-content: space-between;
+        width: 89%;
+        margin: 0 auto;
+        margin-top: 3%;
+    }
+    
+    .collection-heading {
+        margin-top: 2%;
+        margin-bottom: 0.3%;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 35px;
+    }
+    
+    .collection-paragraph {
+        font-size: 19px;
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    .mobile-collection {
+        display: none;
+    }
+    
+    .city-collection {
+        margin-right: 1%;
+        margin-top: 5.4%;
+        font-weight: 550;
+        font-size: 17px;
+        font-style: normal;
+        letter-spacing: 0.02em;
+    }
+    
+    .city-collection a {
+        text-decoration: none;
+        color: rgb(238, 106, 121);
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    .city-collection a:hover {
+        color: rgb(238, 106, 121);
+    }
+    
+    .collection {
+        display: flex;
+        width: 89%;
+        margin: 0 auto;
+    }
+    
+    .collection-item {
+        border: 1px solid gainsboro;
+        width: 98%;
+        border-radius: 20px;
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    
+    .collection-item img {
+        width: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        object-fit: cover;
+        transition: all 1.4s ease 0s;
+    }
+    
+    .collection-anchor {
+        width: 100%;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .bottom-left {
+        position: absolute;
+        bottom: 26px;
+        left: 16px;
+        font-size: 18px;
+        color: white;
+    }
+    
+    .bottom-left1 {
+        position: absolute;
+        bottom: 2px;
+        left: 16px;
+        font-size: 18px;
+        color: white;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+    .main-collection {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 89%;
+        margin: 0 auto;
+        margin-top: 3%;
+    }
+    
+    .collection-heading {
+        margin-bottom: 0.3%;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 35px;
+    }
+    
+    .collection-paragraph {
+        font-size: 19px;
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    .mobile-collection {
+        display: none;
+    }
+    
+    .city-collection {
+        font-weight: 550;
+        font-size: 17px;
+        font-style: normal;
+        letter-spacing: 0.02em;
+        margin: 0 0 20px 0;
+    }
+    
+    .city-collection a {
+        text-decoration: none;
+        color: rgb(238, 106, 121);
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    .city-collection a:hover {
+        color: rgb(238, 106, 121);
+    }
+    
+    .collection {
+        display: flex;
+        width: 89%;
+        margin: 0 auto;
+    }
+    
+    .collection-item {
+        border: 1px solid gainsboro;
+        width: 98%;
+        border-radius: 20px;
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    
+    .collection-item img {
+        width: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        object-fit: cover;
+        transition: all 1.4s ease 0s;
+    }
+    
+    .collection-anchor {
+        width: 100%;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .bottom-left {
+        position: absolute;
+        bottom: 26px;
+        left: 16px;
+        font-size: 18px;
+        color: white;
+    }
+    
+    .bottom-left1 {
+        position: absolute;
+        bottom: 2px;
+        left: 16px;
+        font-size: 18px;
+        color: white;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+    .main-collection {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 89%;
+        margin: 0 auto;
+        margin-top: 3%;
+    }
+    
+    .collection-heading {
+        margin-bottom: 0.3%;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 35px;
+    }
+    
+    .collection-paragraph {
+        font-size: 19px;
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    .mobile-collection {
+        display: none;
+    }
+    
+    .city-collection {
+        font-weight: 550;
+        font-size: 17px;
+        font-style: normal;
+        letter-spacing: 0.02em;
+        margin: 0 0 20px 0;
+    }
+    
+    .city-collection a {
+        text-decoration: none;
+        color: rgb(238, 106, 121);
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    .city-collection a:hover {
+        color: rgb(238, 106, 121);
+    }
+    
+    .collection {
+        display: flex;
+        width: 89%;
+        margin: 0 auto;
+    }
+    
+    .collection-item {
+        border: 1px solid gainsboro;
+        width: 98%;
+        border-radius: 20px;
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    
+    .collection-item img {
+        width: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        object-fit: cover;
+        transition: all 1.4s ease 0s;
+    }
+    
+    .collection-anchor {
+        width: 100%;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .bottom-left {
+        position: absolute;
+        bottom: 26px;
+        left: 16px;
+        font-size: 18px;
+        color: white;
+    }
+    
+    .bottom-left1 {
+        position: absolute;
+        bottom: 2px;
+        left: 16px;
+        font-size: 18px;
+        color: white;
+    }
+
+}

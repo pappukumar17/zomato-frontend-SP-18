@@ -1,0 +1,141 @@
+/* CSS FOR NAVBAR */
+
+.main-header {
+    margin: 10px;
+}
+
+#membership {
+    background-color: white;
+}
+
+.contact-navlink-image-1 {
+    width: 100%;
+    object-fit: contain;
+}
+
+.contact-navlink-image-2 {
+    display: none;
+}
+
+.contact-search {
+    display: flex;
+    width: 50%;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 4px 10px 0px rgb(232, 232, 232);
+    background-color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+.main-navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-menu-icon {
+    display: none;
+}
+
+.contact-search-para {
+    margin-top: 6%;
+}
+
+.contact-search-option {
+    border: none;
+    color: gray;
+}
+
+.contact-search .contact-search-item-1 {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.contact-search .contact-search-item-1 p {
+    font-size: 15px;
+    font-weight: 400;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+.contact-search-item-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-search .contact-search-item-2 input {
+    display: flex;
+    outline: none;
+    border: none;
+    width: 90%;
+    padding-left: 12px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.contact-search .contact-search-item-2:first-child {
+    width: 30%;
+    color: rgb(240, 54, 76);
+}
+
+.contact-search .contact-search-item-1:last-child {
+    width: 70%;
+}
+
+.contact-search-para-2 {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.contact-navbar {
+    width: 100%;
+}
+
+.contact-container {
+    width: 100% !important;
+    display: block;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-menu-icon-1 {
+    display: none !important;
+}
+
+.contact-nav-elements {
+    display: flex;
+    width: 15%;
+    list-style-type: none;
+    padding: 0;
+    justify-content: space-around;
+    margin-bottom: 0;
+}
+
+.contact-nav-elements a {
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0.04em;
+}
+
+.contact-nav-elements a.active {
+    color: #4f4f4f;
+    position: relative;
+}
+
+.contact-app-heading {
+    width: 10%;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.contact-li-1,
+.contact-li-2 {
+    display: none;
+}

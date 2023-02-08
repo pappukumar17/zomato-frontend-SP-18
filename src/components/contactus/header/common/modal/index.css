@@ -1,0 +1,10 @@
+.modal-header {
+    margin-top: 10px;
+    height: 8vh;
+    color: #4F4F4F;
+}
+
+.modal-title {
+    font-size: 25px !important;
+    color: #4F4F4F;
+}
