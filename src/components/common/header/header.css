@@ -1,0 +1,143 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.header-bg {
+  width: 100%;
+  background-image: url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png");
+  height: 489px;
+  background-position: center;
+}
+
+.homepage-header-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 17px 0;
+}
+
+.app-logo-name {
+  text-decoration: none;
+  padding: 8px 8px;
+  font-size: 14px;
+  line-height: 27px;
+  font-weight: 500;
+  color: white;
+}
+
+.app-logo-name:hover {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.navbar-elements {
+  display: flex;
+  gap: 22px;
+
+}
+
+.navbar-element {
+  text-decoration: none;
+  padding: 8px 8px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 450;
+  color: white;
+}
+
+.navbar-element:hover {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: white;
+  padding: 5px 4px;
+  font-weight: 350;
+  font-style: normal;
+  width: 53%;
+}
+
+
+.search-para {
+  margin-top: 6%;
+}
+
+.search-option {
+  border: none;
+  color: gray;
+}
+
+.search .search-item-1 {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.search .search-item-1 p {
+  font-size: 15px;
+  font-weight: 400;
+  margin-right: 10px;
+  padding-left: 10px;
+}
+
+.search-item-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.search .search-item-2 input {
+  display: flex;
+  outline: none;
+  border: none;
+  width: 90%;
+  padding-left: 12px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.search .search-item-2:first-child {
+  width: 30%;
+  color: rgb(240, 54, 76);
+}
+
+.search .search-item-1:last-child {
+  width: 70%;
+}
+
+.search-para-2 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.top-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.zomato-image{
+  width: 300px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.zomato-image-text{
+  font-size: 36px;
+  line-height: 48px;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 0px;
+}

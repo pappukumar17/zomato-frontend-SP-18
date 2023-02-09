@@ -11,7 +11,6 @@
     background-image: url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png");
     height: 489px;
     background-position: center;
-    transition: all 1.4s ease 0s;
   }
   
   .homepage-header-1 {
@@ -19,7 +18,6 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 17px 0;
-    transition: all 1.4s ease 0s;
   }
   
   .app-logo-name {
@@ -39,7 +37,7 @@
   .navbar-elements {
     display: flex;
     gap: 22px;
-    transition: all 1.4s ease 0s;
+  
   }
   
   .navbar-element {
@@ -65,7 +63,6 @@
     font-weight: 350;
     font-style: normal;
     width: 53%;
-    transition: all 1.4s ease 0s;
   }
   
   
@@ -129,14 +126,12 @@
     align-items: center;
     gap: 30px;
     margin-top: 25px;
-    transition: all 1.4s ease 0s;
   }
   
   .zomato-image{
     width: 300px;
     height: 60px;
     object-fit: contain;
-    transition: all 1.4s ease 0s;
   }
   
   .zomato-image-text{
@@ -145,6 +140,5 @@
     color: white;
     font-weight: 500;
     margin-bottom: 0px;
-    transition: all 1.4s ease 0s;
   }
   
