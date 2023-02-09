@@ -3,7 +3,7 @@
     .main-collection {
         display: flex;
         justify-content: space-between;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         margin-top: 3%;
     }
@@ -47,7 +47,7 @@
 
     .collection {
         display: flex;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -100,7 +100,7 @@
     .main-collection {
         display: flex;
         justify-content: space-between;
-        width: 89%;
+        width: 100%;
         margin: 0 auto;
         margin-top: 3%;
     }
@@ -145,7 +145,7 @@
 
     .collection {
         display: flex;
-        width: 89%;
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -202,7 +202,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         margin-top: 3%;
     }
@@ -244,7 +244,7 @@
 
     .collection {
         display: flex;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -303,7 +303,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         margin-top: 3%;
     }
@@ -405,7 +405,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 95%;
+        width: 100%;
         margin: 0 auto;
         margin-top: 3%;
     }
@@ -448,7 +448,7 @@
 
     .collection {
         display: flex;
-        width: 95%;
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -507,7 +507,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        width: 90%;
+        width: 100%;
         margin: auto;
         margin-top: 10px;
     }

@@ -7,7 +7,8 @@ import '../collection/responsive.css'
 function collection() {
     return (
         <>
-                <div className="main-collection">
+            <div className="custom-container">
+            <div className="main-collection">
                     <div className="collection-content">
                         <h1 className='collection-heading'>Collections</h1>
                         <p className="collection-paragraph">Explore curated lists of top restaurants, cafes, pubs, and bars in Delhi NCR, based on trends</p>
@@ -94,6 +95,7 @@ function collection() {
                         </div>
                     </Link>
                 </div>
+            </div>
         </>
 
 

@@ -1,10 +1,11 @@
 
 .category {
     display: flex;
-    width: 81%;
+    width: 100%;
     justify-content: space-evenly;
     align-items: center;
     margin: 0 auto;
+    margin-top: 2%;
 }
 
 .order {

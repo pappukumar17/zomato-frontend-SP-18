@@ -1,69 +1,66 @@
-body {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
-
 .footer {
     background-color: #f8f8f8;
+}
+
+.main-container-4 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-container-1 {
+    display: block;
 }
 
 .main-container-2 {
     display: none;
 }
 
-.main-container-1 {
-    background-color: #f8f8f8;
-}
-
-.container-footer {
-    overflow: hidden;
-    margin: 0 auto;
-}
-
 .headings {
     display: flex;
-    align-items: center;
-    padding-top: 4%;
+    justify-content: space-between;
+    padding-bottom: 3%;
+    padding-top: 5%;
+    margin: 0 auto;
 }
 
 .zomato-name {
     width: 20%;
-    margin-left: 4.3%;
-    font-weight: bold;
 }
 
 .zomato-name img {
-    width: 52%;
-    margin-left: 5%;
-    font-weight: bold;
+    width: 70%;
     object-fit: cover;
 }
 
+.select-cl {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .select-country {
-    width: 10%;
-    margin-left: 49%;
+    width: 100%;
 }
 
 .select-country-name {
     width: 100%;
+    padding-right: 7px;
 }
 
 .select-language {
-    width: 10%;
-    margin-left: 1%;
+    width: 100%;
 }
 
 .information {
     display: flex;
-    justify-content: space-evenly;
-    margin: auto;
-    margin-top: 2%;
+    justify-content: space-between;
+    margin: 0 auto;
 }
 
 .footer-heading {
     font-size: 14px;
     margin-top: 3%;
+    width: 100%;
     font-weight: 500;
     font-style: normal;
     letter-spacing: 0.16em;
@@ -84,51 +81,51 @@ body {
 
 .about-zomato {
     display: flex;
-    justify-content: flex-start;
+    justify-content: left;
     flex-direction: column;
     width: 20%;
 }
 
 .zomaverse {
     display: flex;
-    justify-content: flex-start;
+    justify-content: left;
     flex-direction: column;
-    width: 20%;
+    width: 15%;
 }
 
 .places {
-    width: 20%;
+    width: 23%;
 }
 
 .restaurants {
     display: flex;
-    justify-content: flex-start;
+    justify-content: left;
     flex-direction: column;
 }
 
 .enterprises {
     display: flex;
-    justify-content: flex-start;
+    justify-content: left;
     flex-direction: column;
     margin-top: 4%;
 }
 
 .learn-more {
     display: flex;
-    justify-content: flex-start;
+    justify-content: left;
     flex-direction: column;
-    width: 20%;
+    width: 15%;
 }
 
 .social-links {
-    width: 25%;
+    width: 13%;
+    display: flex;
+    flex-direction: column;
 }
 
 .links {
-    display: flex;
-    justify-content: space-evenly;
-    width: 70%;
-    margin-left: -28px;
+    width: 100%;
+    transform: scale(1);
 }
 
 .footer-link {
@@ -139,35 +136,30 @@ body {
 .download-link-2 {
     display: flex;
     flex-direction: column;
-    width: 0%;
-    align-items: center;
-    margin-left: -3.5%;
+    margin-top: 4%;
 }
 
 .android-image {
-    object-fit: fill;
+    object-fit: contain;
     width: 9rem;
     margin-top: 1%;
-    overflow: hidden;
-    position: absolute;
 }
 
 
 .ios-image {
-    object-fit: fill;
+    object-fit: contain;
     width: 9rem;
-    margin-top: 4.5%;
-    overflow: hidden;
-    position: absolute;
+    margin-top: 20px;
 }
 
 .footer-bottom {
+    width: 100%;
     margin: auto;
     color: #4f4f4f;
     font-size: 14.5px;
     font-weight: 300;
     font-family: Okra, Helvetica, sans-serif;
     font-style: normal;
-    margin-top: 100px;
-    padding-bottom: 40px;
+    margin-top: 8%;
+    padding-bottom: 4%;
 }

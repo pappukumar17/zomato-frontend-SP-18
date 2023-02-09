@@ -1,4 +1,4 @@
-@media (min-width: 1200px) and (max-width: 1450px) {
+@media (min-width: 1200px) and (max-width: 1400px) {
 
     .footer {
         background-color: #f8f8f8;
@@ -20,9 +20,9 @@
 
     .headings {
         display: flex;
-        justify-content: left;
+        justify-content: space-between;
         margin-bottom: 25px;
-        width: 90%;
+        width: 100%;
         margin-bottom: 3% !important;
         margin: 0 auto;
     }
@@ -34,7 +34,6 @@
     .zomato-name img {
         width: 70%;
         object-fit: cover;
-        margin-left: -21%;
     }
 
     .select-cl {
@@ -61,7 +60,7 @@
     .information {
         display: flex;
         justify-content: space-between;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -145,8 +144,6 @@
     .download-link-2 {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-left: 1%;
     }
 
     .android-image {
@@ -167,7 +164,7 @@
     }
 
     .footer-bottom {
-        width: 90%;
+        width: 100%;
         margin: auto;
         color: #4f4f4f;
         font-size: 14.5px;
@@ -201,9 +198,9 @@
 
     .headings {
         display: flex;
-        justify-content: left;
+        justify-content: space-between;
         margin-bottom: 25px;
-        width: 90%;
+        width: 100%;
         margin-bottom: 3% !important;
         margin: 0 auto;
     }
@@ -215,7 +212,6 @@
     .zomato-name img {
         width: 70%;
         object-fit: cover;
-        margin-left: -21%;
     }
 
     .select-cl {
@@ -242,7 +238,7 @@
     .information {
         display: flex;
         justify-content: space-between;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -326,8 +322,6 @@
     .download-link-2 {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-left: 1%;
     }
 
     .android-image {
@@ -348,7 +342,7 @@
     }
 
     .footer-bottom {
-        width: 90%;
+        width: 100%;
         margin: auto;
         color: #4f4f4f;
         font-size: 14.5px;
@@ -383,9 +377,9 @@
 
     .headings {
         display: flex;
-        justify-content: left;
+        justify-content: space-between;
         margin-bottom: 25px;
-        width: 90%;
+        width: 100%;
         margin-bottom: 3% !important;
         margin: 0 auto;
     }
@@ -397,7 +391,6 @@
     .zomato-name img {
         width: 70%;
         object-fit: cover;
-        margin-left: -21%;
     }
 
     .select-cl {
@@ -424,7 +417,7 @@
     .information {
         display: flex;
         justify-content: space-between;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -489,7 +482,7 @@
     }
 
     .social-links {
-        width: 19%;
+        width: 23%;
         display: flex;
         flex-direction: column;
     }
@@ -508,7 +501,6 @@
     .download-link-2 {
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
     .android-image {
@@ -529,14 +521,14 @@
     }
 
     .footer-bottom {
-        width: 90%;
+        width: 100%;
         margin: auto;
         color: #4f4f4f;
         font-size: 14.5px;
         font-weight: 300;
         font-family: Okra, Helvetica, sans-serif;
         font-style: normal;
-        margin-top: 8%;
+        margin-top: 15%;
     }
 
 }

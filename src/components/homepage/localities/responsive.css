@@ -10,7 +10,7 @@
     }
 
     .main-localities {
-        width: 88%;
+        width: 100%;
         margin: auto;
         margin-top: 7%;
     }
@@ -42,6 +42,10 @@
         box-shadow: 0px 4px 10px 0px rgb(232, 232, 232);
         background-color: #FFFFFF;
         color: black;
+    }
+
+    .areas {
+        padding: 8px 8px;
     }
 
     .areas-heading {
@@ -70,7 +74,7 @@
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .main-heading {
-        width: 96%;
+        width: 100%;
         margin: 0 auto;
         text-align: left;
         font-weight: 400;
@@ -79,7 +83,7 @@
     }
 
     .main-localities {
-        width: 92%;
+        width: 100%;
         margin: auto;
         margin-top: 7%;
     }
@@ -113,6 +117,10 @@
         color: black;
     }
 
+    .areas {
+        padding: 8px 8px;
+    }
+
     .areas-heading {
         font-size: 21px;
         margin-left: 3%;
@@ -139,7 +147,7 @@
 @media (min-width: 768px) and (max-width: 992px) {
 
     .main-heading {
-        width: 98%;
+        width: 100%;
         margin: 0 auto;
         text-align: left;
         font-weight: 400;
@@ -148,7 +156,7 @@
     }
 
     .main-localities {
-        width: 90%;
+        width: 100%;
         margin: auto;
         margin-top: 7%;
     }
@@ -212,7 +220,7 @@
 @media (min-width: 576px) and (max-width: 767px) {
 
     .main-heading {
-        width: 95%;
+        width: 100%;
         margin: 0 auto;
         text-align: left;
         font-weight: 400;
@@ -221,7 +229,7 @@
     }
 
     .main-localities {
-        width: 95%;
+        width: 100%;
         margin: auto;
         margin-top: 7%;
     }
@@ -300,7 +308,7 @@
     }
 
     .localities {
-        width: 90%;
+        width: 100%;
         margin: auto;
         display: flex;
         flex-direction: column;

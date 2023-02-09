@@ -13,6 +13,8 @@ function ZomatoApp() {
     };
     return (
         <>
+            <div className="app-bg">
+            <div className="custom-container">
             <div className="main-1">
                 <div className="left-part">
                     <img src={"https://b.zmtcdn.com/data/o2_assets/a500ffc2ab483bc6a550aa635f4e55531648107832.png"} className="left-part-image" alt="" />
@@ -46,6 +48,8 @@ function ZomatoApp() {
                         </div>
                     </div>
                 </div>
+            </div>
+         </div>
             </div>
         </>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './header/header';
+import Header1 from './header/header';
 import Category from './category/category';
 import SignUpModal from './header/signup/signupModal'
 import LoginModal from './header/login/loginModal'
@@ -12,7 +12,7 @@ import Footer from '../common/footer/footer';
 export default function Home() {
   return (
     <div>
-      <Header />
+      <Header1 />
       <SignUpModal />
       <LoginModal />
       <Category />

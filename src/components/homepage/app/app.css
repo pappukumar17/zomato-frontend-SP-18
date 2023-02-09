@@ -1,11 +1,14 @@
 
+.app-bg{
+    background-color: #FEFBF6;
+}
+
 .main-1 {
     padding: 80px 0;
     margin-top: 8%;
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #FEFBF6;
 }
 
 .left-part {

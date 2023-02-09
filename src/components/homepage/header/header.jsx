@@ -6,7 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FaBars } from "react-icons/fa";
-import './header.css'
+
 
 
 const Header = () => {

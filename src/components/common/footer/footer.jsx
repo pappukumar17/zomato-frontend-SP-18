@@ -15,6 +15,8 @@ const handleChange = (value) => {
 const Footer = () => (
     <>
         <footer className="footer">
+        <div className="custom-container">
+                <div className="main-container-4">
                 <div className="main-container-1">
                     <div className="container-footer">
                         <div className="headings">
@@ -84,12 +86,12 @@ const Footer = () => (
                             <section className="about-zomato">
                                 <h6 className="footer-heading">ABOUT ZOMATO</h6>
                                 <Link to="/" className="footer-content">Who We Are</Link>
-                                <Link to="/navbar" className="footer-content">Work With Us</Link>
+                                <Link to="/" className="footer-content">Work With Us</Link>
                                 <Link to="/contactus" className="footer-content">Contact Us</Link>
                             </section>
                             <section className="zomaverse">
                                 <h6 className="footer-heading">ZOMAVERSE</h6>
-                                <Link to="/" className="footer-content">Zomato</Link>
+                                <Link to="/newheader" className="footer-content">Zomato</Link>
                                 <Link to="/" className="footer-content">Blinkit</Link>
                             </section>
                             <section className="places">
@@ -143,6 +145,7 @@ const Footer = () => (
                             By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2023 © Zomato™ Ltd. All rights reserved.
                         </p>
                     </div>
+                </div>
                 </div>
             <section className="section">
                 <div className="main-container-2">
@@ -275,6 +278,7 @@ const Footer = () => (
                     </div>
                 </div>
             </section>
+        </div>
         </footer>
     </>
 );

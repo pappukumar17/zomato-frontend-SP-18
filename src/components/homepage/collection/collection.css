@@ -2,7 +2,7 @@
 .main-collection {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 3%;
 }
@@ -48,7 +48,7 @@
 
 .collection {
     display: flex;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -64,6 +64,7 @@
 
 .collection-item img {
     width: 100%;
+    height: 320px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom-left-radius: 8px;

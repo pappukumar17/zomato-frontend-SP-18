@@ -1,15 +1,14 @@
-
 .main-heading {
     width: 100%;
-    margin:0 auto;
-    text-align: left; 
+    margin: 0 auto;
+    text-align: left;
     font-weight: 400;
     font-style: normal;
     margin-bottom: 4%;
 }
 
-.main-localities{
-    width: 80%;
+.main-localities {
+    width: 100%;
     margin: auto;
     margin-top: 7%;
 }
@@ -27,7 +26,7 @@
     text-decoration: none;
     color: black;
     row-gap: 22px;
-    width: 30%;
+    width: 31%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -41,6 +40,10 @@
     box-shadow: 0px 4px 10px 0px rgb(232, 232, 232);
     background-color: #FFFFFF;
     color: black;
+}
+
+.areas {
+    padding: 8px 8px;
 }
 
 .areas-heading {
@@ -63,9 +66,3 @@
     text-align: center;
     margin-top: 7%;
 }
-
-
-
-
-
-
