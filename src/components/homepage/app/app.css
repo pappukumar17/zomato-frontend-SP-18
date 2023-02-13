@@ -82,10 +82,9 @@
 
 .download-link-1 {
     display: flex;
-    width: 41%;
-    justify-content: space-evenly;
+    width: 70%;
+    justify-content: space-between;
     align-items: center;
-    margin-left: 0.2%;
 }
 
 .android {

@@ -23,9 +23,8 @@
 
 .app-logo-name {
     text-decoration: none;
-    padding: 8px 8px;
+    padding: 2px 8px;
     font-size: 14px;
-    line-height: 27px;
     font-weight: 500;
     color: white;
     display: block;
@@ -47,8 +46,9 @@
     padding: 8px 8px;
     font-size: 18px;
     line-height: 27px;
-    font-weight: 450;
+    font-weight: 400;
     color: white;
+    letter-spacing: 0.07em;
 }
 
 .navbar-element:hover {
@@ -63,6 +63,7 @@
     background: white;
     font-weight: 350;
     font-style: normal;
+    width: 64%;
 }
 
 

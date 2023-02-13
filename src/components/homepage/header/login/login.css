@@ -3,13 +3,13 @@
     margin-top: 0%;
 }
 
-.form-control {
-    height: 6vh;
+.form-control{
+    height: 6vh !important;
     margin-top: -4px;
 }
 
 .form-check {
-    font-size: 13px;
+    font-size: 10px;
     color: #4f4f4f;
 }
 
@@ -25,9 +25,7 @@
 }
 
 .login-account {
-    height: 6vh;
     width: 100%;
-    margin-top: -4px;
     color: white;
     margin-bottom: 5px;
     background-color: #EF4F5F;
@@ -45,7 +43,6 @@
     letter-spacing: 0.03em;
     color: #4f4f4f;
     width: 100%;
-    margin-left: -3.7%;
 }
 
 .login-button {

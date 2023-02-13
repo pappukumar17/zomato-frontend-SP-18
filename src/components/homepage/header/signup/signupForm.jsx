@@ -2,8 +2,9 @@ import React from 'react';
 import './signup.css'
 import { Link } from 'react-router-dom';
 
-
 const SignUp = () => {
+
+    
     return (
         <>
             <form >
@@ -23,7 +24,7 @@ const SignUp = () => {
                     </label>
                 </div>
                 <div className="d-grid gap-2">
-                    <Link to="/signup"><button className="create-account" type="button">Create Account</button></Link>
+                    <Link to="/signup"><button className="create-account" type="button" >Create Account</button></Link>
                 </div>
                 <div className="form-check">
                     <label type="text" className="already">Already have an account? <Link to="/login" className="signup-button" tabindex="-1" role="button" aria-disabled="true">Log In</Link>

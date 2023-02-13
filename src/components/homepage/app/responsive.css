@@ -505,9 +505,8 @@
 
     .download-link-1 {
         display: flex;
-        width: 65%;
+        width: 75%;
         justify-content: space-between;
-        align-items: center;
         margin: 0 auto;
     }
 
@@ -566,7 +565,7 @@
     }
 }
 
-@media (max-width: 575px) {
+@media (min-width: 400px) and (max-width: 575px) {
 
     .main-1 {
         width: 100%;
@@ -652,8 +651,11 @@
 
     .download-link-1 {
         display: flex;
-        width: 60%;
+        width: 85%;
+        justify-content: space-between;
+        align-items: center;
         margin: 0 auto;
+        margin-left: 13%;
     }
 
     .android {
@@ -666,14 +668,160 @@
 
     .android-image-1 {
         object-fit: contain;
-        width: 8rem;
         overflow: hidden;
         position: absolute;
     }
 
     .ios-image-1 {
         object-fit: contain;
-        width: 8rem;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    .download-app {
+        font-weight: 350;
+        color: #9c9c9c;
+        margin-top: 2%;
+        font-size: 15px;
+        letter-spacing: 0.02em;
+        text-align: center;
+    }
+
+
+    /* ant design */
+
+    .ant-radio-checked .ant-radio-inner {
+        background-color: white !important;
+        border-color: red !important;
+        border: 9px solid red !important;
+    }
+
+    .ant-radio-checked .ant-radio-inner:after {
+        border-color: red !important;
+        background-color: white !important;
+    }
+
+    .ant-radio:hover .ant-radio-inner {
+        background-color: white !important;
+        border: 8px solid red !important;
+    }
+
+    .ant-radio-checked .ant-radio-inner:focus {
+        background-color: red !important;
+    }
+}
+
+@media (max-width: 399px) {
+
+    .main-1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #FEFBF6;
+    }
+
+    .left-part {
+        display: none;
+    }
+
+    .left-part-image {
+        width: 100%;
+        transform: scale(1.2);
+        transition: all 1.4s ease 0s;
+        object-fit: contain;
+        padding-top: 10%;
+    }
+
+    .right-part {
+        width: 98%;
+    }
+
+    .zomato-heading {
+        margin: 10px auto;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        text-align: center;
+    }
+
+    .zomato-paragraph {
+        width: 100%;
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 0.03em;
+        text-align: center;
+    }
+
+    .contact {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .contact-1 {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        align-items: center;
+        margin: 10px auto;
+    }
+
+    .radio-email {
+        font-weight: 300 !important;
+        font-size: 17px;
+    }
+
+    .radio-phone {
+        font-weight: 300 !important;
+        font-size: 17px;
+    }
+
+    .email-1 {
+        width: 100%;
+        margin: 0 auto;
+        margin-left: 11%;
+    }
+
+    .email-1 input {
+        height: 100%;
+    }
+
+    .email-2 {
+        width: 100%;
+        margin-left: 5%;
+    }
+
+    .email-2 button {
+        height: 100%;
+    }
+
+    .download-link-1 {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        margin-left: 5%;
+    }
+
+    .android {
+        width: 100%;
+    }
+
+    .ios {
+        width: 100%;
+    }
+
+    .android-image-1 {
+        object-fit: contain;
+        width: 120px;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    .ios-image-1 {
+        object-fit: contain;
+        width: 120px;
         overflow: hidden;
         position: absolute;
     }

@@ -10,7 +10,7 @@ const LogIn = () => {
                     <input type="text" className="form-control" id="contact" placeholder="Phone / Email" />
                 </div>
                 <div className="mb-3">
-                    <input type="password" className="form-control" id="email" placeholder="Password" />
+                    <input type="password" className="form-control" id="password" placeholder="Password" />
                 </div>
                 <div className="d-grid gap-2">
                     <Link to="/login"><button className="login-account" type="button">Log In</button></Link>
