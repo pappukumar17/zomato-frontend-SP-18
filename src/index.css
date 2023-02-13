@@ -21,10 +21,6 @@ code {
   width: 100%;
 }
 
-.custom-container{
-  max-width: 1200px;
-}
-
 @media (min-width: 1400px) {
   .custom-container {
     max-width: 1100px;

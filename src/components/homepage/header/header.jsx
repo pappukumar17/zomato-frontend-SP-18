@@ -3,21 +3,45 @@ import './header.css'
 import './responsive.css'
 import '../../../index.css'
 import { NavLink } from 'react-router-dom'
+import { useState } from 'react'
 import { HiLocationMarker } from "react-icons/hi";
 import { MdOutlineAppSettingsAlt } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
+import { AiOutlineClose } from "react-icons/ai";
+import { FaBars } from "react-icons/fa";
 
 export default function Header() {
+    const [showNavbar, setShowNavbar] = useState(false)
+
+    const handleShowNavbar = () => {
+        setShowNavbar(!showNavbar)
+    }
     return (
+
         <div className='header-bg'>
             <div className="custom-container">
                 <header className='homepage-header-1'>
+                <div className="homepage-menu-icon" onClick={handleShowNavbar}>
+                        <FaBars color="white" size={20} className='contact-menu-icon-bs' />
+                    </div>
                     <ul className="app-logo-section">
                         <li>
                             <NavLink className={"app-logo-name"}><MdOutlineAppSettingsAlt /> Get the app</NavLink>
                         </li>
                     </ul>
-                    <ul className="navbar-elements">
+                    <ul className={`navbar-elements ${showNavbar && 'mbl_nav'}`}>
+                        <li className='homepage-li-1'>
+                            <NavLink>
+                                <div className="homepage-menu-icon" onClick={handleShowNavbar}>
+                                    <AiOutlineClose color="black" size={22} className='menu-icon-bs' />
+                                </div>
+                            </NavLink>
+                        </li>
+                        <li className='homepage-li-2'>
+                            <NavLink>
+                                <img className='homepage-navlink-image-2' src={"https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"} alt="hello" />
+                            </NavLink>
+                        </li>
                         <li>
                             <NavLink className={"navbar-element"}>Add restaurant</NavLink>
                         </li>
