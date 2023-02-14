@@ -1,5 +1,6 @@
 import React from 'react';
 import './signup.css'
+import './responsive.css'
 import { Link } from 'react-router-dom';
 
 
@@ -8,19 +9,19 @@ const SignUp = () => {
         <>
             <form >
                 <div className="mb-3">
-                    <input type="text" className="form-control" id="contactFullName" placeholder="Full Name" />
+                    <input type="text" className="form-control" placeholder="Full Name" />
                 </div>
                 <div className="mb-3">
-                    <input type="email" className="form-control" id="signupEmail" placeholder="Email" />
+                    <input type="email" className="form-control" placeholder="Email" />
                 </div>
                 <div className="mb-3">
-                    <input type="password" className="form-control" id="contactSignupPassword" placeholder="Password" />
+                    <input type="password" className="form-control" placeholder="Password" />
                 </div>
                 <div className="mb-3">
-                    <input type="password" className="form-control" id="contactConfirmPassword" placeholder="Confirm Password" />
+                    <input type="password" className="form-control" placeholder="Confirm Password" />
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault contact" />
+                    <input className="form-check-input" type="checkbox" value="" /*{id="flexCheckDefault"}*/ />
                     <label className="form-check-label" htmlFor="flexCheckDefault">
                         I agree to Zomato's <Link className='checkbox-heading' to='/'> Terms of Service, Privacy Policy</Link> and <Link className='checkbox-heading' to='/'>Content Policies</Link>
                     </label>

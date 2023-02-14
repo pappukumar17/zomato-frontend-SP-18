@@ -1,16 +1,18 @@
-/* CSS FOR LOGIN FORM*/
-.modal-form {
-    margin-top: 0%;
-}
+@media (max-width:1400px) {
 
-.form-control{
-    height: 6vh !important;
-    margin-top: -4px;
+   /* CSS FOR SIGNUP FORM*/
+
+.form-control {
+    height: 8vh;
+    margin-top: -4px !important;
 }
 
 .form-check {
-    font-size: 10px;
-    color: #4f4f4f;
+    font-size: 13px;
+}
+
+.form-check-label{
+    letter-spacing: 0.02em !important;
 }
 
 .checkbox-heading {
@@ -24,35 +26,34 @@
     color: rgb(241, 79, 98);
 }
 
-.login-account {
-    width: 100%;
+.create-account {
     height: 8vh;
+    width: 100%;
+    margin-top: 8px;
     color: white;
-    margin-bottom: 5px;
+    margin-bottom: 4%;
     background-color: #EF4F5F;
     border: 1px solid white;
     border-radius: 10px;
-    font-size: 22px;
 }
 
-.login-account:hover {
+.create-account:hover {
     background-color: rgb(232, 50, 71);
 }
 
-.already-login {
+.already {
+    margin-top: -8px;
     font-size: 18px !important;
     letter-spacing: 0.03em;
-    color: #4f4f4f;
-    width: 100%;
+    margin-left: -12px;
 }
 
-.login-button {
+.signup-button {
     text-decoration: none;
     color: rgb(241, 79, 98);
-    font-size: 18px !important;
-    letter-spacing: 0.03em;
 }
 
-.login-button:hover {
+.signup-button:hover {
     color: rgb(232, 50, 71);
+}
 }

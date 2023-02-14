@@ -474,6 +474,7 @@
     .menu-icon-bs {
         position: absolute;
         font-weight: bold;
+        margin-left: 0;
     }
 
     .contact-navbar {
@@ -496,6 +497,7 @@
         display: flex;
         flex-direction: column;
         padding-left: 2%;
+       
     }
 
     .contact-nav-elements a {
@@ -519,7 +521,8 @@
     .Active {
         width: 100%;
         background-color: white;
-        height: 100vh;
+        height: 44vh;
+        padding-left: 4%;
     }
 
     .contact-li-1 {
@@ -616,7 +619,8 @@
     .Active {
         width: 100%;
         background-color: white;
-        height: 100vh;
+        height: 44vh;
+        padding-left: 4%;
     }
 
     .contact-li-1 {

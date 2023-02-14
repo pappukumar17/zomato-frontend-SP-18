@@ -7,17 +7,18 @@
 }
 
 .header-bg {
-    width: 100%;
     background-image: url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png");
-    height: 489px;
+    height: 480px;
     background-position: center;
     background-repeat: no-repeat;
+    transform: scale(1.1);
 }
 
 .homepage-header-1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 25px;
     padding: 17px 0;
 }
 
@@ -38,7 +39,6 @@
 .navbar-elements {
     display: flex;
     gap: 22px;
-
 }
 
 .navbar-element {
@@ -49,6 +49,7 @@
     font-weight: 400;
     color: white;
     letter-spacing: 0.07em;
+    transition: all 1.4s ease 0s;
 }
 
 .navbar-element:hover {
@@ -61,9 +62,8 @@
     align-items: center;
     border-radius: 10px;
     background: white;
-    font-weight: 350;
-    font-style: normal;
     width: 64%;
+    transition: all 1.4s ease 0s;
 }
 
 
@@ -83,7 +83,7 @@
 }
 
 .search .search-item-1 p {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     margin-right: 10px;
     padding-left: 10px;
@@ -102,7 +102,7 @@
     border: none;
     width: 90%;
     padding-left: 12px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
 }
 
@@ -125,13 +125,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    margin-top: 25px;
+    gap: 24px;
+    margin-top: 40px;
     width: 100%;
 }
 
 .zomato-image {
-    width: 300px;
+    width: 260px;
     height: 60px;
     object-fit: contain;
 }

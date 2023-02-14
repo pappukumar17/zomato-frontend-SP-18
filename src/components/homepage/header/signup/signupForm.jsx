@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './signup.css'
+import './responsive.css'
 import { Link } from 'react-router-dom';
 
 const SignUp = () => {
