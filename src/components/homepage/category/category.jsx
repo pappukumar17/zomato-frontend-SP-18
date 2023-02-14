@@ -8,7 +8,7 @@ function category() {
         <>
             <div className="custom-container">
             <div className="category">
-                    <Link href="/" className="anchor">
+                    <Link to="/" className="anchor">
                         <div className="order">
                             <div className="image">
                                 <img src={"https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"} alt="" />
@@ -19,7 +19,7 @@ function category() {
                             </div>
                         </div>
                     </Link>
-                    <Link href="/" className="anchor">
+                    <Link to="/" className="anchor">
                         <div className="dining">
                             <div className="image">
                                 <img src={"https://b.zmtcdn.com/webFrontend/d026b357feb0d63c997549f6398da8cc1647364915.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"} alt="" />
@@ -30,7 +30,7 @@ function category() {
                             </div>
                         </div>
                     </Link>
-                    <Link href="/" className="anchor">
+                    <Link to="/" className="anchor">
                         <div className="nightlife">
                             <div className="image">
                                 <img src={"https://b.zmtcdn.com/webFrontend/d9d80ef91cb552e3fdfadb3d4f4379761647365057.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"} alt="" />

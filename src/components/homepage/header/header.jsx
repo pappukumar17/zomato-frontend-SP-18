@@ -17,12 +17,17 @@ export default function Header() {
     const handleShowNavbar = () => {
         setShowNavbar(!showNavbar)
     }
+
+    const searchHandle = async (event) => {
+        await fetch(`http://localhost:4000/customers/menu`)
+    }
+    
     return (
 
         <div className='header-bg'>
             <div className="custom-container">
                 <header className='homepage-header-1'>
-                <div className="homepage-menu-icon" onClick={handleShowNavbar}>
+                    <div className="homepage-menu-icon" onClick={handleShowNavbar}>
                         <FaBars color="white" size={20} className='contact-menu-icon-bs' />
                     </div>
                     <ul className="app-logo-section">
@@ -65,15 +70,16 @@ export default function Header() {
                             <HiLocationMarker size={30} color="rgb(255, 126, 139)" />
                             <p className="search-para">
                                 <select name="membership" id="membership" className='search-option'>
-                                    <option value="silver" selected>Spark Eighteen, New Delhi</option>
+                                    <option value="silver">Spark Eighteen, New Delhi</option>
                                 </select>
                             </p>
                         </div>
                         <Divider type="vertical" style={{
-                            border:"1px solid grey"}} />
+                            border: "1px solid grey"
+                        }} />
                         <div className="search-item-2">
                             <BsSearch size={20} className="location-marker" />
-                            <input type="text" placeholder="Search for restaurant, cuisine or a dish" className='search-para-2' />
+                            <input type="text" placeholder="Search for restaurant, cuisine or a dish" className='search-para-2' onChange={searchHandle} />
                         </div>
                     </div>
                 </div>

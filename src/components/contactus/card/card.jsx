@@ -12,7 +12,7 @@ const CardComponent = ({ heading, paragraph, report}) => (
     >
         <h2 className='card-heading'>{heading}</h2>
         <p className='card-paragraph'>{paragraph}</p>
-        <Link className='card-report'>{report}</Link>
+        <Link to="/" className='card-report'>{report}</Link>
     </Card>
 );
 export default CardComponent;

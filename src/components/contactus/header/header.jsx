@@ -35,7 +35,7 @@ const Header1 = () => {
                                 <HiLocationMarker size={25} color="rgb(255, 126, 139)" />
                                 <p className="contact-search-para">
                                     <select name="membership" id="membership" className='contact-search-option'>
-                                        <option value="silver" selected>Spark Eighteen, New Delhi</option>
+                                        <option value="silver">Spark Eighteen, New Delhi</option>
                                     </select></p>
                             </div>
                             <div className="contact-search-item-2">

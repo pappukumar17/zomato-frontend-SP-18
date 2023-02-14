@@ -2,7 +2,7 @@ import '../modal/index.css'
 
 const Modal = ({ children, id, heading }) => {
     return (
-        <div className="modal fade" id={id} tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div className="modal fade" id={id} tabIndex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
             <div className="modal-dialog">
                 <div className="modal-content">
                     <div className="modal-header">
