@@ -67,7 +67,7 @@ export default function Header() {
                     <p className="zomato-image-text">Discover the best food & drinks in Delhi NCR</p>
                     <div className="search">
                         <div className="search-item-1">
-                            <HiLocationMarker size={30} color="rgb(255, 126, 139)" className='zomato-location-mark'/>
+                            <HiLocationMarker size={30} color="rgb(255, 126, 139)" className='zomato-location-mark' />
                             <p className="search-para">
                                 <select name="membership" id="membership" className='search-option'>
                                     <option value="silver">Spark Eighteen, New Delhi</option>

@@ -49,7 +49,6 @@
     font-weight: 400;
     color: white;
     letter-spacing: 0.07em;
-    transition: all 1.4s ease 0s;
 }
 
 .navbar-element:hover {

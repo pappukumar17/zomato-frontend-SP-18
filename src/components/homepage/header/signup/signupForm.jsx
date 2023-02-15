@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import './signup.css'
 import './responsive.css'
@@ -8,43 +8,64 @@ const SignUp = () => {
 
     const [fullName, setFullName] = useState("");
     const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [password, setPassword] = useState("");
 
-    function doSignup() {
-
-        axios.post('http://localhost:4000/customers/create')
-            .then(response => {
-                setFullName(response.data.fullName);
-                setEmail(response.data.email);
-                setConfirmPassword(response.data.confirmPassword);
-                setPassword(response.data.password);
-            })
-            .catch(error => {
-                if (error.response) {
-                    // console.log(error.response);
-                }
-            });
+    const handleFullName = (event) => {
+        setFullName(event.target.value)
     }
 
-    useEffect(() => {
-        doSignup()
-    }, [])
+    const handleEmail = (event) => {
+        setEmail(event.target.value)
+    }
+
+    const handlePhone = (event) => {
+        setPhone(event.target.value)
+    }
+
+    const handleConfrimPassword = (event) => {
+        setConfirmPassword(event.target.value)
+    }
+
+    const handlePassword = (event) => {
+        setPassword(event.target.value)
+    }
+
+    const doSignup = async () => {
+
+        await axios.post('http://localhost:4000/customers/create', {
+            fullName: fullName,
+            email: email,
+            phone: phone,
+            confirmPassword: confirmPassword,
+            password: password
+        })
+            .then(result => {
+                console.log(result.data)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
 
     return (
         <>
             <form >
                 <div className="mb-3">
-                    <input type="text" className="form-control" htmlFor="fullName" id="fullName" onChange={(e) => setFullName(e.target.value)} placeholder="Full Name" value={fullName} />
+                    <input type="text" className="form-control" id="fullName" onChange={handleFullName} placeholder="Full Name" value={fullName} required={true} />
                 </div>
                 <div className="mb-3">
-                    <input type="email" className="form-control" htmlFor="email" id="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email" value={email} />
+                    <input type="email" className="form-control" id="email" onChange={handleEmail} placeholder="Email" value={email} />
                 </div>
                 <div className="mb-3">
-                    <input type="password" className="form-control" htmlFor="password" id="signuppassword" onChange={(e) => setPassword(e.target.value)} placeholder="Password" value={password} />
+                    <input type="text" className="form-control" id="phone" onChange={handlePhone} placeholder="Phone" value={phone} />
                 </div>
                 <div className="mb-3">
-                    <input type="password" className="form-control" htmlFor="confirmpassword" id="confirmpassword" onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirm Password" value={confirmPassword} />
+                    <input type="password" className="form-control" id="confirmpassword" onChange={handleConfrimPassword} placeholder="Confirm Password" value={confirmPassword} />
+                </div>
+                <div className="mb-3">
+                    <input type="password" className="form-control" id="signuppassword" onChange={handlePassword} placeholder="Password" value={password} />
                 </div>
                 <div className="form-check">
                     <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault homepage" />
@@ -63,4 +84,5 @@ const SignUp = () => {
         </>
     );
 };
+
 export default SignUp;
