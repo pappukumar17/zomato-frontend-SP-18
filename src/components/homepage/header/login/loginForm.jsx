@@ -14,7 +14,7 @@ const onFinishFailed = (errorInfo) => {
 
 
 
-const LogIn = () => {
+const LogIn = (props) => {
 
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
@@ -33,7 +33,7 @@ const LogIn = () => {
         setPassword(event.target.value)
     }
 
-    const doLogin = async () => {
+    const doLogin = async (props) => {
 
         await axios.post('http://localhost:4000/customers/login', {
             // email: email,
@@ -41,12 +41,14 @@ const LogIn = () => {
             password: password
         })
             .then(result => {
-                console.log(result.data)
+                console.log(result.data.data.token)
             })
             .catch(err => {
                 console.log(err)
             })
+        
     }
+
     return (
         <>
             <div className="form-container">
@@ -111,9 +113,11 @@ const LogIn = () => {
                             span: 25,
                         }}
                     >
-                        <Link to="/"><Button type="primary" className='create-account' htmlType="submit" onClick={doLogin}>
+                        <Link to="/">
+                            <Button type="primary" className='create-account' htmlType="submit" onClick={doLogin}>
                             Log In
-                        </Button></Link>
+                            </Button>
+                        </Link>
                         <div className="form-check-1">
                             <label type="text" className="already-login">New to Zomato?
                                 <Link className="login-button" tabIndex="-1" role="button" aria-disabled="true">Create Account</Link>
