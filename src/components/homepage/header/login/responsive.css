@@ -1,61 +1,45 @@
 @media (max-width:1400px) {
+/* CSS FOR LOGIN FORM*/
 
-    /* CSS FOR LOGIN FORM*/
-    .modal-form {
-        margin-top: 0%;
-    }
+.checkbox-heading {
+    color: rgb(241, 79, 98);
+    font-weight: bold;
+    text-decoration: none;
+}
 
-    .form-control {
-        height: 8vh !important;
-        margin-top: -4px;
-    }
+.checkbox-heading:hover {
+    background-color: white;
+    color: rgb(241, 79, 98);
+}
 
-    .form-check {
-        font-size: 10px;
-        color: #4f4f4f;
-    }
+.login-account {
+    width: 100%;
+    color: white;
+    background-color: #EF4F5F;
+    border-radius: 10px;
+    font-size: 22px;
+}
 
-    .checkbox-heading {
-        color: rgb(241, 79, 98);
-        font-weight: bold;
-        text-decoration: none;
-    }
+.login-account:hover {
+    background-color: rgb(232, 50, 71);
+}
 
-    .checkbox-heading:hover {
-        background-color: white;
-        color: rgb(241, 79, 98);
-    }
+.already-login {
+    margin-top: 3%;
+    font-size: 18px !important;
+    letter-spacing: 0.03em;
+    color: #4f4f4f;
+    width: 100%;
+}
 
-    .login-account {
-        width: 100%;
-        height: 8vh;
-        color: white;
-        margin-bottom: 5px;
-        background-color: #EF4F5F;
-        border: 1px solid white;
-        border-radius: 10px;
-        font-size: 22px;
-    }
+.login-button {
+    text-decoration: none;
+    color: rgb(241, 79, 98);
+    font-size: 18px !important;
+    letter-spacing: 0.03em;
+}
 
-    .login-account:hover {
-        background-color: rgb(232, 50, 71);
-    }
-
-    .already-login {
-        font-size: 18px !important;
-        letter-spacing: 0.03em;
-        color: #4f4f4f;
-        width: 100%;
-    }
-
-    .login-button {
-        text-decoration: none;
-        color: rgb(241, 79, 98);
-        font-size: 18px !important;
-        letter-spacing: 0.03em;
-    }
-
-    .login-button:hover {
-        color: rgb(232, 50, 71);
-    }
+.login-button:hover {
+    color: rgb(232, 50, 71);
+}
 }

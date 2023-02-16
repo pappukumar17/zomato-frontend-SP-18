@@ -3,6 +3,14 @@ import './login.css'
 import './responsive.css'
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import { Button,Form, Input } from 'antd';
+
+const onFinish = (values) => {
+    console.log('Success:', values);
+};
+const onFinishFailed = (errorInfo) => {
+    console.log('Failed:', errorInfo);
+};
 
 
 
@@ -28,7 +36,7 @@ const LogIn = () => {
     const doLogin = async () => {
 
         await axios.post('http://localhost:4000/customers/login', {
-            email: email,
+            // email: email,
             phone: phone,
             password: password
         })
@@ -41,28 +49,79 @@ const LogIn = () => {
     }
     return (
         <>
-            <form method='POST' className='modal-form' >
-                <div className="mb-2">
-                    <input type="text" className="form-control" htmlFor="contact" id="loginemail" onChange={handleEmail} placeholder="Email" />
-                </div>
-                <p className="lead text-center">
-                    OR
-                </p>
-                <div className="mb-3 mt-2">
-                    <input type="text" className="form-control" htmlFor="contact" id="loginphone" onChange={handlePhone} placeholder="Phone" />
-                </div>
-                <div className="mb-3">
-                    <input type="password" className="form-control" htmlFor="password" id="loginpassword" onChange={handlePassword} placeholder="Password" />
-                </div>
-                <div className="d-grid gap-2">
-                    <Link to="/signup"><button className="login-account" type="button" onClick={doLogin}>Log In</button></Link>
-                </div>
-                <div className="form-check">
-                    <label type="text" className="already-login">New to Zomato?
-                        <Link className="login-button" tabIndex="-1" role="button" aria-disabled="true">Create Account</Link>
-                    </label>
-                </div>
-            </form>
+            <div className="form-container">
+                <Form
+                    name="homepage-login-form"
+                    size="large"
+
+                    wrapperCol={{
+                        span: 25,
+                    }}
+                    style={{
+                        maxWidth: 600,
+                    }}
+                    initialValues={{
+                        remember: true,
+                    }}
+                    onFinish={onFinish}
+                    onFinishFailed={onFinishFailed}
+                    autoComplete="off"
+                    className='login-form'
+                >
+                    <Form.Item
+                        name="email"
+                        rules={[
+                            {
+                                required: false,
+                                message: 'Please enter a correct email!',
+                            },
+                        ]}
+                    >
+                        <Input placeholder='Email' onChange={handleEmail} />
+                    </Form.Item>
+
+                    <Form.Item
+                        name="phone"
+                        rules={[
+                            {
+                                required: false,
+                                message: 'Please enter a correct phoneNo.!',
+                            },
+                        ]}
+                    >
+                        <Input placeholder='Phone' onChange={handlePhone} />
+                    </Form.Item>
+
+                    <Form.Item
+                        name="password"
+                        rules={[
+                            {
+                                required: true,
+                                message: 'Please input your password!',
+                            },
+                        ]}
+                    >
+                        <Input.Password placeholder='Password' onChange={handlePassword} />
+                    </Form.Item>
+
+                    <Form.Item
+                        size="large"
+                        wrapperCol={{
+                            offset: 0,
+                            span: 25,
+                        }}
+                    >
+                        <Link to="/"><Button type="primary" className='create-account' htmlType="submit" onClick={doLogin}>
+                            Log In
+                        </Button></Link>
+                        <div className="form-check-1">
+                            <label type="text" className="already-login">New to Zomato?
+                                <Link className="login-button" tabIndex="-1" role="button" aria-disabled="true">Create Account</Link>
+                            </label>
+                        </div>
+                    </Form.Item>
+                </Form>
+            </div>
 
         </>
     );

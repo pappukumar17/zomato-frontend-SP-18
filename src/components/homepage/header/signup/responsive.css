@@ -1,59 +1,45 @@
 @media (max-width:1400px) {
-
-   /* CSS FOR SIGNUP FORM*/
-
-.form-control {
-    height: 8vh;
-    margin-top: -4px !important;
-}
-
-.form-check {
-    font-size: 13px;
-}
-
-.form-check-label{
-    letter-spacing: 0.02em !important;
-}
-
-.checkbox-heading {
-    color: rgb(241, 79, 98);
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.checkbox-heading:hover {
-    background-color: white;
-    color: rgb(241, 79, 98);
-}
-
-.create-account {
-    height: 8vh;
-    width: 100%;
-    margin-top: 8px;
-    color: white;
-    margin-bottom: 4%;
-    background-color: #EF4F5F;
-    border: 1px solid white;
-    border-radius: 10px;
-}
-
-.create-account:hover {
-    background-color: rgb(232, 50, 71);
-}
-
-.already {
-    margin-top: -8px;
-    font-size: 18px !important;
-    letter-spacing: 0.03em;
-    margin-left: -12px;
-}
-
-.signup-button {
-    text-decoration: none;
-    color: rgb(241, 79, 98);
-}
-
-.signup-button:hover {
-    color: rgb(232, 50, 71);
-}
-}
+    /* CSS FOR SIGNUP FORM*/
+    
+    .signup-form{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .checkbox-heading {
+        color: rgb(241, 79, 98);
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    .checkbox-heading:hover {
+        background-color: white;
+        color: rgb(241, 79, 98);
+    }
+    
+    .create-account {
+        width: 100%;
+        color: white;
+        background-color: #EF4F5F;
+        border-radius: 10px;
+    }
+    
+    .create-account:hover {
+        background-color: rgb(232, 50, 71);
+    }
+    
+    .already {
+        font-size: 18px !important;
+        letter-spacing: 0.03em;
+        margin-top: 2%;
+    }
+    
+    .signup-button {
+        text-decoration: none;
+        color: rgb(241, 79, 98);
+    }
+    
+    .signup-button:hover {
+        color: rgb(232, 50, 71);
+    }
+    }

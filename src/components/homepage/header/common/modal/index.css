@@ -1,7 +1,8 @@
 
 .modal-header{
-    margin-top: 10px;
     color: #4F4F4F;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .modal-title {

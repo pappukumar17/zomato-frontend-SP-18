@@ -57,6 +57,10 @@ export default function Header() {
                         <li>
                             <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#signup">Sign up</NavLink>
                         </li>
+                        <li>
+                            <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#signup">Logout</NavLink>
+                        </li>
+
 
                     </ul>
                 </header>

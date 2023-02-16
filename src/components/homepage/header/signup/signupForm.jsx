@@ -3,9 +3,16 @@ import axios from 'axios';
 import './signup.css'
 import './responsive.css'
 import { Link } from 'react-router-dom';
+import { Button, Checkbox, Form, Input} from 'antd';
+
+const onFinish = (values) => {
+    console.log('Success:', values);
+};
+const onFinishFailed = (errorInfo) => {
+    console.log('Failed:', errorInfo);
+};
 
 const SignUp = () => {
-
     const [fullName, setFullName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
@@ -32,6 +39,14 @@ const SignUp = () => {
         setPassword(event.target.value)
     }
 
+    // const [messageApi, contextHolder] = message.useMessage();
+    // const success = () => {
+    //     messageApi.open({
+    //         type: 'success',
+    //         content: 'You have been registered succesfully',
+    //     });
+    // };
+
     const doSignup = async () => {
 
         await axios.post('http://localhost:4000/customers/create', {
@@ -43,6 +58,7 @@ const SignUp = () => {
         })
             .then(result => {
                 console.log(result.data)
+
             })
             .catch(err => {
                 console.log(err)
@@ -51,36 +67,113 @@ const SignUp = () => {
 
     return (
         <>
-            <form >
-                <div className="mb-3">
-                    <input type="text" className="form-control" id="fullName" onChange={handleFullName} placeholder="Full Name" value={fullName} required={true} />
-                </div>
-                <div className="mb-3">
-                    <input type="email" className="form-control" id="email" onChange={handleEmail} placeholder="Email" value={email} />
-                </div>
-                <div className="mb-3">
-                    <input type="text" className="form-control" id="phone" onChange={handlePhone} placeholder="Phone" value={phone} />
-                </div>
-                <div className="mb-3">
-                    <input type="password" className="form-control" id="confirmpassword" onChange={handleConfrimPassword} placeholder="Confirm Password" value={confirmPassword} />
-                </div>
-                <div className="mb-3">
-                    <input type="password" className="form-control" id="signuppassword" onChange={handlePassword} placeholder="Password" value={password} />
-                </div>
-                <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault homepage" />
-                    <label className="form-check-label" htmlFor="flexCheckDefault">
-                        I agree to Zomato's <Link className='checkbox-heading' to='/'> Terms of Service, Privacy Policy</Link> and <Link className='checkbox-heading' to='/'>Content Policies</Link>
-                    </label>
-                </div>
-                <div className="d-grid gap-2">
-                    <Link to="/signup" ><button className="create-account" type="button" onClick={doSignup}>Create Account</button></Link>
-                </div>
-                <div className="form-check">
-                    <label type="text" className="already">Already have an account? <Link to="/login" className="signup-button" tabIndex="-1" role="button" aria-disabled="true">Log In</Link>
-                    </label>
-                </div>
-            </form>
+            <div className="form-container">
+                <Form
+                    name="signup-form"
+                    size="large"
+
+                    wrapperCol={{
+                        span: 25,
+                    }}
+                    style={{
+                        maxWidth: 600,
+                    }}
+                    initialValues={{
+                        remember: true,
+                    }}
+                    onFinish={onFinish}
+                    onFinishFailed={onFinishFailed}
+                    autoComplete="off"
+                    className='signup-form'
+                >
+                    <Form.Item
+                        name="fullName"
+                        rules={[
+                            {
+                                required: true,
+                                message: 'Please enter a correct fullName!',
+                            },
+                        ]}
+                    >
+                        <Input placeholder='Full Name' onChange={handleFullName} />
+                    </Form.Item>
+
+                    <Form.Item
+                        name="email"
+                        rules={[
+                            {
+                                required: true,
+                                message: 'Please enter a correct email!',
+                            },
+                        ]}
+                    >
+                        <Input placeholder='Email' onChange={handleEmail} />
+                    </Form.Item>
+
+                    <Form.Item
+                        name="phone"
+                        rules={[
+                            {
+                                required: true,
+                                message: 'Please enter a correct phoneNo.!',
+                            },
+                        ]}
+                    >
+                        <Input placeholder='Phone' onChange={handlePhone} />
+                    </Form.Item>
+
+                    <Form.Item
+                        name="password"
+                        rules={[
+                            {
+                                required: true,
+                                message: 'Please input your password!',
+                            },
+                        ]}
+                    >
+                        <Input.Password placeholder='Password' onChange={handlePassword} />
+                    </Form.Item>
+
+                    <Form.Item
+                        name="confirmPassword"
+                        rules={[
+                            {
+                                required: true,
+                                message: 'Please enter confirm Password!',
+                            },
+                        ]}
+                    >
+                        <Input.Password placeholder='Confirm Password' onChange={handleConfrimPassword} />
+                    </Form.Item>
+
+                    <Form.Item
+                        name="remember"
+                        valuePropName="checked"
+                        wrapperCol={{
+                            offset: 0,
+                            span: 25,
+                        }}
+                    >
+                        <Checkbox> I agree to Zomato's <Link className='checkbox-heading' to='/'> Terms of Service, Privacy Policy</Link> and <Link className='checkbox-heading' to='/'>Content Policies</Link></Checkbox>
+                    </Form.Item>
+
+                    <Form.Item
+                        size="large"
+                        wrapperCol={{
+                            offset: 0,
+                            span: 25,
+                        }}
+                    >
+                        <Button type="primary" className='create-account' htmlType="submit" onClick={doSignup}>
+                            Create Account
+                        </Button>
+                        <div className="form-check-1">
+                            <label type="text" className="already">Already have an account? <Link to="/login" className="signup-button" tabIndex="-1" role="button" aria-disabled="true">Log In</Link>
+                            </label>
+                        </div>
+                    </Form.Item>
+                </Form>
+            </div>
         </>
     );
 };
