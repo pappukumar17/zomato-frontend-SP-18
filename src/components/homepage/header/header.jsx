@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import './header.css'
 import './responsive.css'
 import '../../../index.css'
@@ -13,9 +13,6 @@ import { FaBars } from "react-icons/fa";
 
 export default function Header() {
 
-    const navlist = useRef(null);
-    const navlist2 = useRef(null);
-    const navlist3 = useRef(null);
     const [showNavbar, setShowNavbar] = useState(false)
 
     const handleShowNavbar = () => {
@@ -24,12 +21,6 @@ export default function Header() {
 
     const searchHandle = async (event) => {
         await fetch(`http://localhost:4000/customers/menu`)
-    }
-
-    const LOGIN = () => {
-        navlist.current.style.display = "none"
-        navlist2.current.style.display = "none"
-        navlist3.current.style.display = "block"
     }
 
     return (
@@ -62,13 +53,13 @@ export default function Header() {
                             <NavLink className={"navbar-element"}>Add restaurant</NavLink>
                         </li>
                         <li>
-                            <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#login" ref={navlist} onClick={LOGIN}>Log in</NavLink>
+                            <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#login" >Log in</NavLink>
                         </li>
                         <li>
-                            <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#signup" ref={navlist2}>Sign up</NavLink>
+                            <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#signup" >Sign up</NavLink>
                         </li>
                         <li>
-                            <NavLink className={"navbar-element navbar-element-logout"} data-bs-toggle="modal" data-bs-target="#signup" ref={navlist3}>Logout</NavLink>
+                            <NavLink className={"navbar-element navbar-element-logout"} data-bs-toggle="modal" data-bs-target="#signup">Logout</NavLink>
                         </li>
 
 

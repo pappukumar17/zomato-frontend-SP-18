@@ -3,7 +3,8 @@ import axios from 'axios';
 import './signup.css'
 import './responsive.css'
 import { Link } from 'react-router-dom';
-import { Button, Checkbox, Form, Input} from 'antd';
+import { Button, Checkbox, Form, Input, message } from 'antd';
+
 
 const onFinish = (values) => {
     console.log('Success:', values);
@@ -13,6 +14,7 @@ const onFinishFailed = (errorInfo) => {
 };
 
 const SignUp = () => {
+    const [messageApi, contextHolder] = message.useMessage();
     const [fullName, setFullName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
@@ -39,35 +41,34 @@ const SignUp = () => {
         setPassword(event.target.value)
     }
 
-    // const [messageApi, contextHolder] = message.useMessage();
-    // const success = () => {
-    //     messageApi.open({
-    //         type: 'success',
-    //         content: 'You have been registered succesfully',
-    //     });
-    // };
-
     const doSignup = async () => {
 
-        await axios.post('http://localhost:4000/customers/create', {
-            fullName: fullName,
-            email: email,
-            phone: phone,
-            confirmPassword: confirmPassword,
-            password: password
-        })
-            .then(result => {
-                console.log(result.data)
-
+        try {
+            const resp = await axios.post('http://localhost:4000/customers/create', {
+                fullName: fullName,
+                email: email,
+                phone: phone,
+                confirmPassword: confirmPassword,
+                password: password
             })
-            .catch(err => {
-                console.log(err)
-            })
+            console.log('resp', resp);
+            messageApi.success({
+                content: resp.response?.data?.message || "You have been registered successfully!",
+                duration: 10
+            });
+        } catch (e) {
+            console.log('e', e.response.data.message);
+            messageApi.error({
+                content: e.response?.data?.message || 'Something went wrong!',
+                duration: 10
+            });
+        }
     }
 
     return (
         <>
             <div className="form-container">
+                {contextHolder}
                 <Form
                     name="signup-form"
                     size="large"

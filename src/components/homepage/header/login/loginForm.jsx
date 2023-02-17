@@ -3,7 +3,7 @@ import './login.css'
 import './responsive.css'
 import { Link } from "react-router-dom";
 import axios from 'axios';
-import { Button,Form, Input } from 'antd';
+import { Button, Form, Input, message } from 'antd';
 
 const onFinish = (values) => {
     console.log('Success:', values);
@@ -12,9 +12,12 @@ const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
 };
 
-
+// const axiosBaseURL = axiosAPI.create({
+//     baseURL: `${baseURL}`
+// });
 
 const LogIn = (props) => {
+    const [messageApi, contextHolder] = message.useMessage();
 
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
@@ -33,25 +36,33 @@ const LogIn = (props) => {
         setPassword(event.target.value)
     }
 
-    const doLogin = async (props) => {
+    const doLogin = async () => {
+        try {
+            const resp = await axios.post('http://localhost:4000/customers/login', {
+                // email: email,
+                phone: phone,
+                password: password
+            })
+            console.log('resp', resp);
 
-        await axios.post('http://localhost:4000/customers/login', {
-            // email: email,
-            phone: phone,
-            password: password
-        })
-            .then(result => {
-                console.log(result.data.data.token)
-            })
-            .catch(err => {
-                console.log(err)
-            })
-        
+            messageApi.success({
+                content: resp.data?.message || "You have been successfully loggedin!",
+                duration: 10
+            });
+        } catch (e) {
+            console.log('e', e.response.data.message);
+            messageApi.error({
+                content: e.response?.data?.message || 'Something went wrong!',
+                duration: 10
+            });
+        }
+
     }
 
     return (
         <>
             <div className="form-container">
+                {contextHolder}
                 <Form
                     name="homepage-login-form"
                     size="large"
@@ -115,7 +126,7 @@ const LogIn = (props) => {
                     >
                         <Link to="/">
                             <Button type="primary" className='create-account' htmlType="submit" onClick={doLogin}>
-                            Log In
+                                Log In
                             </Button>
                         </Link>
                         <div className="form-check-1">
