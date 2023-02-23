@@ -7,7 +7,7 @@ function category() {
     return (
         <>
             <div className="custom-container">
-            <div className="category">
+                <div className="category">
                     <Link to="/" className="anchor">
                         <div className="order">
                             <div className="image">

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './signup.css'
 import './responsive.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button, Checkbox, Form, Input, message } from 'antd';
 
 
@@ -20,6 +20,7 @@ const SignUp = () => {
     const [phone, setPhone] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     const handleFullName = (event) => {
         setFullName(event.target.value)
@@ -41,26 +42,31 @@ const SignUp = () => {
         setPassword(event.target.value)
     }
 
-    const doSignup = async () => {
-
+    const doSignup = async (e) => {
+        e.preventDefault();
         try {
-            const resp = await axios.post('http://localhost:4000/customers/create', {
+            const response = await axios.post('http://localhost:4000/customers/create', {
                 fullName: fullName,
                 email: email,
                 phone: phone,
                 confirmPassword: confirmPassword,
                 password: password
             })
-            console.log('resp', resp);
+            console.log('response', response);
+            console.log('response', response.data?.message)
             messageApi.success({
-                content: resp.response?.data?.message || "You have been registered successfully!",
-                duration: 10
+                content: response.data?.message,
+                duration: 5
             });
+
+            if (response.status === 201) {
+                navigate("/home")
+            }
         } catch (e) {
             console.log('e', e.response.data.message);
             messageApi.error({
                 content: e.response?.data?.message || 'Something went wrong!',
-                duration: 10
+                duration: 5
             });
         }
     }

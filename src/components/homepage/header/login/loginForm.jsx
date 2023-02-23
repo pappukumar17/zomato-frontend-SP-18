@@ -12,10 +12,6 @@ const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
 };
 
-// const axiosBaseURL = axiosAPI.create({
-//     baseURL: `${baseURL}`
-// });
-
 const LogIn = (props) => {
     const [messageApi, contextHolder] = message.useMessage();
 
@@ -38,26 +34,32 @@ const LogIn = (props) => {
 
     const doLogin = async () => {
         try {
-            const resp = await axios.post('http://localhost:4000/customers/login', {
+            const response = await axios.post('http://localhost:4000/customers/login', {
                 // email: email,
                 phone: phone,
                 password: password
             })
-            console.log('resp', resp);
-
+            console.log('response', response);
             messageApi.success({
-                content: resp.data?.message || "You have been successfully loggedin!",
-                duration: 10
+                content: response.data?.message || "You have been successfully loggedin!",
+                duration: 5
             });
+
+            localStorage.setItem('login', JSON.stringify({
+                login: true,
+                token: response.data.data.token
+            }))
+            
         } catch (e) {
             console.log('e', e.response.data.message);
             messageApi.error({
                 content: e.response?.data?.message || 'Something went wrong!',
-                duration: 10
+                duration: 5
             });
         }
-
     }
+
+    useState({ login: true })
 
     return (
         <>
@@ -141,4 +143,5 @@ const LogIn = (props) => {
         </>
     );
 };
+
 export default LogIn;
