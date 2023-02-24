@@ -3,9 +3,15 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './components/homepage/home';
 import Contact from './components/contactus/contact';
 import Signup from './components/homepage/header/signup/signup';
+import { setAuthToken } from './components/homepage/header/login/loginForm';
 
 
 function App() {
+
+  const token = localStorage.getItem("token");
+  if (token) {
+      setAuthToken(token);
+  }
 
   return (
     <div className="App">

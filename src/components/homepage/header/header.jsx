@@ -11,6 +11,7 @@ import { BsSearch } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 
+
 export default function Header() {
 
     const [showNavbar, setShowNavbar] = useState(false)

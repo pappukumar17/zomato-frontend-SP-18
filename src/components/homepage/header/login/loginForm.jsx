@@ -4,13 +4,24 @@ import './responsive.css'
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { Button, Form, Input, message } from 'antd';
+// import jwt from 'jsonwebtoken';
 
 const onFinish = (values) => {
     console.log('Success:', values);
 };
+
 const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
 };
+
+export const setAuthToken = token => {
+    if (token) {
+        axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+    }
+    else
+        delete axios.defaults.headers.common["Authorization"];
+}
+
 
 const LogIn = (props) => {
     const [messageApi, contextHolder] = message.useMessage();
@@ -32,7 +43,9 @@ const LogIn = (props) => {
         setPassword(event.target.value)
     }
 
-    const doLogin = async () => {
+    const doLogin = async (e) => {
+        e.preventDefault()
+
         try {
             const response = await axios.post('http://localhost:4000/customers/login', {
                 // email: email,
@@ -45,11 +58,13 @@ const LogIn = (props) => {
                 duration: 5
             });
 
-            localStorage.setItem('login', JSON.stringify({
-                login: true,
-                token: response.data.data.token
-            }))
-            
+            const token = response.data.data.token;
+            localStorage.setItem('token', token);
+
+            setAuthToken(token);
+
+            // window.location.href = '/'
+
         } catch (e) {
             console.log('e', e.response.data.message);
             messageApi.error({
