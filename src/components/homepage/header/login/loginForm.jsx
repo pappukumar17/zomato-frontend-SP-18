@@ -63,10 +63,11 @@ const LogIn = (props) => {
 
             setAuthToken(token);
 
-            // window.location.href = '/'
+            window.location.href = '/home'
 
         } catch (e) {
             console.log('e', e.response.data.message);
+            
             messageApi.error({
                 content: e.response?.data?.message || 'Something went wrong!',
                 duration: 5

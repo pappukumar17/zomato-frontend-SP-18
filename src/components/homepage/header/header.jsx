@@ -24,6 +24,7 @@ export default function Header() {
         await fetch(`http://localhost:4000/customers/menu`)
     }
 
+
     return (
 
         <div className='header-bg'>
@@ -51,7 +52,7 @@ export default function Header() {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink className={"navbar-element"}>Add restaurant</NavLink>
+                            <NavLink className={"navbar-element"} to="/signup">Add restaurant</NavLink>
                         </li>
                         <li>
                             <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#login" >Log in</NavLink>
