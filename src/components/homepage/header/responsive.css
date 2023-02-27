@@ -807,14 +807,6 @@
         display: none;
     }
 
-    .login-elements {
-        display: flex;
-        flex-direction: column;
-        gap: 55px;
-        justify-content: center;
-        align-items: center;
-    }
-
     .login-elements-ul {
         display: flex;
         flex-direction: column;
@@ -1019,15 +1011,6 @@
 
     .app-logo-section {
         display: none;
-    }
-
-    .login-elements {
-        display: flex;
-        flex-direction: column;
-        gap: 55px;
-        justify-content: center;
-        align-items: center;
-        padding-left: 0;
     }
 
     .login-elements-ul {

@@ -39,14 +39,17 @@
 
 .navbar-elements {
     display: flex;
+    padding-left: 0;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 0;
 }
 
 .navbar-element {
     text-decoration: none;
-    padding: 8px 8px;
+    padding: 0px 10px;
     font-size: 18px;
-    line-height: 27px;
+    line-height: 21px;
     font-weight: 400;
     color: white;
     letter-spacing: 0.07em;
@@ -154,10 +157,6 @@
 
 .homepage-menu-icon {
     display: none;
-}
-
-.login-elements{
-    display: flex;
 }
 
 .login-elements-ul {

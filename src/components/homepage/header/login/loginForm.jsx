@@ -50,9 +50,12 @@ const LogIn = (props) => {
             });
 
             const token = response.data.data.token;
-            localStorage.setItem('token', token);
-            navigate(0)
-            
+
+            if (response.status === 200) {
+                localStorage.setItem('token', token);
+                navigate(0)
+            }
+
         } catch (e) {
             console.log('e', e.response.data.message);
             messageApi.error({
@@ -128,7 +131,7 @@ const LogIn = (props) => {
                         }}
                     >
                         <Link to="/">
-                            <Button type="primary" className='create-account' htmlType="submit" data-bs-dismiss="modal" onClick={doLogin}>
+                            <Button type="primary" className='create-account' htmlType="submit" onClick={doLogin}>
                                 Log In
                             </Button>
                         </Link>

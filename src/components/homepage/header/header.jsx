@@ -97,12 +97,6 @@ export default function Header() {
                         <li>
                             <NavLink className={"navbar-element"} to="/signup">Add restaurant</NavLink>
                         </li>
-                        {/* <li>
-                            <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#login" >Log in</NavLink>
-                        </li>
-                        <li>
-                            <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#signup" >Sign up</NavLink>
-                        </li> */}
                         <li className="login-elements">
                             {
                                 loggedInUser ? <NavLink className={"navbar-element"} onClick={handleLogout}>Logout</NavLink> :

@@ -54,13 +54,14 @@ const SignUp = () => {
             })
             console.log('response', response);
             console.log('response', response.data?.message)
-            messageApi.success({
-                content: response.data?.message,
-                duration: 5
-            });
 
             if (response.status === 201) {
-                navigate("/home")
+                messageApi.success({
+                    content: response.data?.message,
+                    duration: 5
+                })
+                
+                navigate(0)
             }
         } catch (e) {
             console.log('e', e.response.data.message);
@@ -171,7 +172,7 @@ const SignUp = () => {
                             span: 25,
                         }}
                     >
-                        <Button type="primary" className='create-account' htmlType="submit" data-bs-dismiss="modal" onClick={doSignup}>
+                        <Button type="primary" className='create-account' htmlType="submit" onClick={doSignup}>
                             Create Account
                         </Button>
                         <div className="form-check-1">
