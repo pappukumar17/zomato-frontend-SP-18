@@ -1,20 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import './header.css'
 import './responsive.css'
 import '../../../index.css'
 import { NavLink } from 'react-router-dom'
-import { Divider } from 'antd';
-import { useState } from 'react'
+import { Divider, message } from 'antd';
 import { HiLocationMarker } from "react-icons/hi";
 import { MdOutlineAppSettingsAlt } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 
 export default function Header() {
-
     const [showNavbar, setShowNavbar] = useState(false)
+    const [messageApi, contextHolder] = message.useMessage();
+    let navigate = useNavigate();
+    const [loggedInUser, setLoggedInUser] = useState("");
+
+    useEffect(() => {
+        const loggUser = localStorage.getItem("token");
+
+        setLoggedInUser(loggUser)
+
+    }, []);
 
     const handleShowNavbar = () => {
         setShowNavbar(!showNavbar)
@@ -24,10 +34,43 @@ export default function Header() {
         await fetch(`http://localhost:4000/customers/menu`)
     }
 
+    const handleLogout = async (e) => {
+        e.preventDefault()
+        try {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                messageApi.success({
+                    content: "Please login first!",
+                    duration: 5
+                });
+            } else {
+                const api = axios.create({
+                    baseURL: 'http://localhost:4000/customers',
+                    headers: {
+                        Authorization: `Bearer ${localStorage.getItem('token')}`,
+                    },
+                });
+                await api.post('/logout');
+                localStorage.removeItem('token');
+                messageApi.success({
+                    content: e.response?.data?.message || "You have been successfully logged Out!",
+                    duration: 5
+                });
+                navigate(0)
+            }
+
+        } catch (e) {
+            // console.log('e', e.response.data.message);
+            messageApi.error({
+                content: e.response?.data?.message || 'Something went wrong!',
+                duration: 5
+            });
+        }
+    };
 
     return (
-
         <div className='header-bg'>
+            {contextHolder}
             <div className="custom-container">
                 <header className='homepage-header-1'>
                     <div className="homepage-menu-icon" onClick={handleShowNavbar}>
@@ -54,17 +97,29 @@ export default function Header() {
                         <li>
                             <NavLink className={"navbar-element"} to="/signup">Add restaurant</NavLink>
                         </li>
-                        <li>
+                        {/* <li>
                             <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#login" >Log in</NavLink>
                         </li>
                         <li>
                             <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#signup" >Sign up</NavLink>
-                        </li>
-                        <li>
-                            <NavLink className={"navbar-element navbar-element-logout"} data-bs-toggle="modal" data-bs-target="#signup">Logout</NavLink>
-                        </li>
+                        </li> */}
+                        <li className="login-elements">
+                            {
+                                loggedInUser ? <NavLink className={"navbar-element"} onClick={handleLogout}>Logout</NavLink> :
+                                    <>
+                                        <ul className="login-elements-ul">
+                                            <li>
+                                                <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#login" >Log in</NavLink>
+                                            </li>
+                                            <li>
+                                                <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#signup" >Sign up</NavLink>
+                                            </li>
+                                        </ul>
+                                    </>
 
+                            }
 
+                        </li>
                     </ul>
                 </header>
             </div>

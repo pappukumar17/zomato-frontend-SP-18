@@ -4,7 +4,7 @@ import './responsive.css'
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { Button, Form, Input, message } from 'antd';
-// import jwt from 'jsonwebtoken';
+import { useNavigate } from "react-router-dom";
 
 const onFinish = (values) => {
     console.log('Success:', values);
@@ -14,25 +14,16 @@ const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
 };
 
-export const setAuthToken = token => {
-    if (token) {
-        axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-    }
-    else
-        delete axios.defaults.headers.common["Authorization"];
-}
-
-
 const LogIn = (props) => {
     const [messageApi, contextHolder] = message.useMessage();
 
-    const [email, setEmail] = useState("");
+    // const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [password, setPassword] = useState("");
-
+    let navigate = useNavigate();
 
     const handleEmail = (event) => {
-        setEmail(event.target.value)
+        // setEmail(event.target.value)
     }
 
     const handlePhone = (event) => {
@@ -60,22 +51,16 @@ const LogIn = (props) => {
 
             const token = response.data.data.token;
             localStorage.setItem('token', token);
-
-            setAuthToken(token);
-
-            window.location.href = '/home'
-
+            navigate(0)
+            
         } catch (e) {
             console.log('e', e.response.data.message);
-            
             messageApi.error({
                 content: e.response?.data?.message || 'Something went wrong!',
                 duration: 5
             });
         }
     }
-
-    useState({ login: true })
 
     return (
         <>
@@ -143,7 +128,7 @@ const LogIn = (props) => {
                         }}
                     >
                         <Link to="/">
-                            <Button type="primary" className='create-account' htmlType="submit" onClick={doLogin}>
+                            <Button type="primary" className='create-account' htmlType="submit" data-bs-dismiss="modal" onClick={doLogin}>
                                 Log In
                             </Button>
                         </Link>

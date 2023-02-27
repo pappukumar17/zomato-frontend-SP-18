@@ -39,8 +39,6 @@
 
     .navbar-elements {
         display: flex;
-        gap: 22px;
-
     }
 
     .navbar-element {
@@ -146,6 +144,11 @@
         text-align: center;
     }
 
+    .login-elements-ul {
+        display: flex;
+        padding-left: 0;
+    }
+
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -189,8 +192,6 @@
 
     .navbar-elements {
         display: flex;
-        gap: 22px;
-
     }
 
     .navbar-element {
@@ -296,6 +297,11 @@
         text-align: center;
     }
 
+    .login-elements-ul {
+        display: flex;
+        padding-left: 0;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -339,8 +345,6 @@
 
     .navbar-elements {
         display: flex;
-        gap: 22px;
-
     }
 
     .navbar-element {
@@ -444,6 +448,11 @@
         font-weight: 500;
         margin-bottom: 0px;
         text-align: center;
+    }
+
+    .login-elements-ul {
+        display: flex;
+        padding-left: 0;
     }
 
 }
@@ -489,8 +498,6 @@
 
     .navbar-elements {
         display: flex;
-        gap: 22px;
-
     }
 
     .navbar-element {
@@ -594,6 +601,11 @@
         font-weight: 500;
         margin-bottom: 0px;
         text-align: center;
+    }
+
+    .login-elements-ul {
+        display: flex;
+        padding-left: 0;
     }
 
 }
@@ -795,6 +807,23 @@
         display: none;
     }
 
+    .login-elements {
+        display: flex;
+        flex-direction: column;
+        gap: 55px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login-elements-ul {
+        display: flex;
+        flex-direction: column;
+        gap: 55px;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+    }
+
 }
 
 @media (max-width: 479px) {
@@ -990,5 +1019,23 @@
 
     .app-logo-section {
         display: none;
+    }
+
+    .login-elements {
+        display: flex;
+        flex-direction: column;
+        gap: 55px;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .login-elements-ul {
+        display: flex;
+        flex-direction: column;
+        gap: 55px;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
     }
 }

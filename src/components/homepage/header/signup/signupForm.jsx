@@ -171,7 +171,7 @@ const SignUp = () => {
                             span: 25,
                         }}
                     >
-                        <Button type="primary" className='create-account' htmlType="submit" onClick={doSignup}>
+                        <Button type="primary" className='create-account' htmlType="submit" data-bs-dismiss="modal" onClick={doSignup}>
                             Create Account
                         </Button>
                         <div className="form-check-1">

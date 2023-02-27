@@ -39,7 +39,6 @@
 
 .navbar-elements {
     display: flex;
-    gap: 22px;
     align-items: center;
 }
 
@@ -155,4 +154,13 @@
 
 .homepage-menu-icon {
     display: none;
+}
+
+.login-elements{
+    display: flex;
+}
+
+.login-elements-ul {
+    display: flex;
+    padding-left: 0;
 }
