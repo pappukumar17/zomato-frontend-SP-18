@@ -1,30 +1,80 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import { HiLocationMarker } from "react-icons/hi";
 // import { MdOutlineAppSettingsAlt } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
-import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FaBars } from "react-icons/fa";
+import { message } from 'antd';
 import './header.css'
 import './responsive.css'
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 
 const Header1 = () => {
     const [showNavbar, setShowNavbar] = useState(false)
+    const [messageApi, contextHolder] = message.useMessage();
+    let navigate = useNavigate();
+    const [loggedInUser, setLoggedInUser] = useState("");
+
+    useEffect(() => {
+        const loggUser = localStorage.getItem("token");
+        setLoggedInUser(loggUser)
+
+    }, []);
 
     const handleShowNavbar = () => {
         setShowNavbar(!showNavbar)
     }
 
+    const searchHandle = async (event) => {
+        await fetch(`http://localhost:4000/customers/menu`)
+    }
+
+    const handleLogout = async (e) => {
+        e.preventDefault()
+        try {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                messageApi.success({
+                    content: "Please login first!",
+                    duration: 5
+                });
+            } else {
+                const api = axios.create({
+                    baseURL: 'http://localhost:4000/customers',
+                    headers: {
+                        Authorization: `Bearer ${localStorage.getItem('token')}`,
+                    },
+                });
+                await api.post('/logout');
+                localStorage.removeItem('token');
+                messageApi.success({
+                    content: e.response?.data?.message || "You have been successfully logged Out!",
+                    duration: 5
+                });
+                navigate(0)
+            }
+
+        } catch (e) {
+            // console.log('e', e.response.data.message);
+            messageApi.error({
+                content: e.response?.data?.message || 'Something went wrong!',
+                duration: 5
+            });
+        }
+    };
+
     return (
         <>
             <header className='main-header'>
+                {contextHolder}
                 <div className="custom-container">
                     <div className="main-navbar">
-                    <div className="contact-menu-icon" onClick={handleShowNavbar}>
-                        <FaBars color="black" size={20} className='contact-menu-icon-bs' />
-                    </div>
+                        <div className="contact-menu-icon" onClick={handleShowNavbar}>
+                            <FaBars color="black" size={20} className='contact-menu-icon-bs' />
+                        </div>
                         <ul className='contact-app-heading'>
                             <NavLink>
                                 <img className='contact-navlink-image-1' src={"https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"} alt="hello" />
@@ -40,7 +90,7 @@ const Header1 = () => {
                             </div>
                             <div className="contact-search-item-2">
                                 <BsSearch size={20} className="location-marker" />
-                                <input type="text" placeholder="Search for restaurant, cuisine or a dish" className='contact-search-para-2' />
+                                <input type="text" placeholder="Search for restaurant, cuisine or a dish" className='contact-search-para-2' onChange={searchHandle} />
                             </div>
                         </ul>
                         <ul className={`contact-nav-elements  ${showNavbar && 'Active'}`}>
@@ -56,11 +106,21 @@ const Header1 = () => {
                                     <img className='contact-navlink-image-2' src={"https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"} alt="hello" />
                                 </NavLink>
                             </li>
-                            <li>
-                                <NavLink data-bs-toggle="modal" data-bs-target="#login">Log in</NavLink>
-                            </li>
-                            <li>
-                                <NavLink data-bs-toggle="modal" data-bs-target="#signup">Sign up</NavLink>
+                            <li className="login-elements">
+                                {
+                                    loggedInUser ? <NavLink className={"navbar-element"} onClick={handleLogout}>Logout</NavLink> :
+                                        <>
+                                            <ul className="contact-login-elements-ul">
+                                                <li>
+                                                    <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#login" >Log in</NavLink>
+                                                </li>
+                                                <li>
+                                                    <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#signup" >Sign up</NavLink>
+                                                </li>
+                                            </ul>
+                                        </>
+                                }
+
                             </li>
                         </ul>
                     </div>

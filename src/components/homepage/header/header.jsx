@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import './header.css'
 import './responsive.css'
 import '../../../index.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import { Divider, message } from 'antd';
 import { HiLocationMarker } from "react-icons/hi";
 import { MdOutlineAppSettingsAlt } from "react-icons/md";
@@ -21,7 +21,6 @@ export default function Header() {
 
     useEffect(() => {
         const loggUser = localStorage.getItem("token");
-
         setLoggedInUser(loggUser)
 
     }, []);

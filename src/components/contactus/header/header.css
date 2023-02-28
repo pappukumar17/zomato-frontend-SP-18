@@ -146,3 +146,7 @@
 .contact-li-2 {
     display: none;
 }
+
+.contact-login-elements-ul{
+    display: flex;
+}

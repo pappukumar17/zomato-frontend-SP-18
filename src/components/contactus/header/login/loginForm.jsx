@@ -3,57 +3,59 @@ import './login.css'
 import './responsive.css'
 import { Link } from "react-router-dom";
 import axios from 'axios';
-import { Button,Form, Input } from 'antd';
+import { Button, Form, Input, message } from 'antd';
+import { useNavigate } from "react-router-dom";
 
-const onFinish = (values) => {
-    console.log('Success:', values);
-};
+
 const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
 };
 
-
-
 const LogIn = () => {
 
-    const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState("");
-    const [password, setPassword] = useState("");
+    const [messageApi, contextHolder] = message.useMessage();
+    const [isModalOpen, setIsModalOpen] = useState(true);
+    let navigate = useNavigate();
+    const [form] = Form.useForm();
 
+    const handleOk = () => {
+        setIsModalOpen(false);
+    };
 
-    const handleEmail = (event) => {
-        setEmail(event.target.value)
+    const onFinish = async (values) => {
+        console.log('Success:', values);
+        try {
+            const response = await axios.post('http://localhost:4000/customers/login', values)
+            console.log('response', response);
+            
+            const token = response.data.data.token;
+            
+            if (response.status === 200) {
+                localStorage.setItem('token', token);
+                navigate("/contactus")
+            }
+            messageApi.success({
+                content: response.data?.message || "You have been successfully loggedin!",
+                duration: 5
+            });
+            form.resetFields()
+            handleOk()
+            
+        } catch (e) {
+            console.log('e', e.response.data.message);
+            messageApi.error({
+                content: e.response?.data?.message || 'Something went wrong!',
+                duration: 5
+            });
+        }
     }
 
-    const handlePhone = (event) => {
-        setPhone(event.target.value)
-    }
-
-    const handlePassword = (event) => {
-        setPassword(event.target.value)
-    }
-
-    const doLogin = async () => {
-
-        await axios.post('http://localhost:4000/customers/login', {
-            email: email,
-            phone: phone,
-            password: password
-        })
-            .then(result => {
-                console.log(result.data)
-            })
-            .catch(err => {
-                console.log(err)
-            })
-    }
     return (
         <>
             <div className="form-container">
+                {contextHolder}
                 <Form
-                    name="contact-login-form"
                     size="large"
-
                     wrapperCol={{
                         span: 25,
                     }}
@@ -65,31 +67,33 @@ const LogIn = () => {
                     }}
                     onFinish={onFinish}
                     onFinishFailed={onFinishFailed}
-                    autoComplete="off"
-                    className='signup-form'
+                    autoComplete="on"
+                    className='contact-login-form'
+
+                    form={form}
                 >
                     <Form.Item
                         name="email"
                         rules={[
                             {
                                 required: false,
-                                message: 'Please enter a correct email!',
+                                message: 'Please enter your Email Address!',
                             },
                         ]}
                     >
-                        <Input placeholder='Email' onChange={handleEmail} />
+                        <Input placeholder='Email' />
                     </Form.Item>
 
                     <Form.Item
-                        name="email"
+                        name="phone"
                         rules={[
                             {
                                 required: false,
-                                message: 'Please enter a correct phoneNo.!',
+                                message: 'Please enter your Phone No.!',
                             },
                         ]}
                     >
-                        <Input placeholder='Phone' onChange={handlePhone} />
+                        <Input placeholder='Phone'/>
                     </Form.Item>
 
                     <Form.Item
@@ -101,7 +105,7 @@ const LogIn = () => {
                             },
                         ]}
                     >
-                        <Input.Password placeholder='Password' onChange={handlePassword} />
+                        <Input.Password placeholder='Password'/>
                     </Form.Item>
 
                     <Form.Item
@@ -111,7 +115,7 @@ const LogIn = () => {
                             span: 25,
                         }}
                     >
-                        <Button type="primary" className='create-account' htmlType="submit" onClick={doLogin}>
+                        <Button type="primary" className='create-account' htmlType="submit" open={isModalOpen}>
                             Log In
                         </Button>
                         <div className="form-check-1">

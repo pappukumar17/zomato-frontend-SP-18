@@ -3,7 +3,8 @@ import axios from 'axios';
 import './signup.css'
 import './responsive.css'
 import { Link } from 'react-router-dom';
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Checkbox, Form, Input, message } from 'antd';
+import { useNavigate } from "react-router-dom";
 
 const onFinish = (values) => {
     console.log('Success:', values);
@@ -13,11 +14,13 @@ const onFinishFailed = (errorInfo) => {
 };
 
 const SignUp = () => {
+    const [messageApi, contextHolder] = message.useMessage();
     const [fullName, setFullName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     const handleFullName = (event) => {
         setFullName(event.target.value)
@@ -39,29 +42,41 @@ const SignUp = () => {
         setPassword(event.target.value)
     }
 
-    const doSignup = async () => {
-
-        await axios.post('http://localhost:4000/customers/create', {
-            fullName: fullName,
-            email: email,
-            phone: phone,
-            confirmPassword: confirmPassword,
-            password: password
-        })
-            .then(result => {
-                console.log(result.data)
-
+    const doSignup = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post('http://localhost:4000/customers/create', {
+                fullName: fullName,
+                email: email,
+                phone: phone,
+                confirmPassword: confirmPassword,
+                password: password
             })
-            .catch(err => {
-                console.log(err)
-            })
+            console.log('response', response);
+            console.log('response', response.data?.message)
+
+            if (response.status === 201) {
+                messageApi.success({
+                    content: response.data?.message,
+                    duration: 5
+                })
+                
+                navigate(0)
+            }
+        } catch (e) {
+            console.log('e', e.response.data.message);
+            messageApi.error({
+                content: e.response?.data?.message || 'Something went wrong!',
+                duration: 5
+            });
+        }
     }
 
     return (
         <>
             <div className="form-container">
+            {contextHolder}
                 <Form
-                    name="contact-signup-form"
                     size="large"
 
                     wrapperCol={{
@@ -75,11 +90,11 @@ const SignUp = () => {
                     }}
                     onFinish={onFinish}
                     onFinishFailed={onFinishFailed}
-                    autoComplete="off"
-                    className='signup-form'
+                    autoComplete="on"
+                    className='contact-signup-form'
                 >
                     <Form.Item
-                        name="fullName"
+                        // name="fullName"
                         rules={[
                             {
                                 required: true,
@@ -91,7 +106,7 @@ const SignUp = () => {
                     </Form.Item>
 
                     <Form.Item
-                        name="email"
+                        // name="email"
                         rules={[
                             {
                                 required: true,
@@ -103,7 +118,7 @@ const SignUp = () => {
                     </Form.Item>
 
                     <Form.Item
-                        name="phone"
+                        // name="phone"
                         rules={[
                             {
                                 required: true,
@@ -115,7 +130,7 @@ const SignUp = () => {
                     </Form.Item>
 
                     <Form.Item
-                        name="password"
+                        // name="password"
                         rules={[
                             {
                                 required: true,
@@ -127,7 +142,7 @@ const SignUp = () => {
                     </Form.Item>
 
                     <Form.Item
-                        name="confirmPassword"
+                        // name="confirmPassword"
                         rules={[
                             {
                                 required: true,
@@ -139,7 +154,7 @@ const SignUp = () => {
                     </Form.Item>
 
                     <Form.Item
-                        name="remember"
+                        // name="remember"
                         valuePropName="checked"
                         wrapperCol={{
                             offset: 0,
