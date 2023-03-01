@@ -1,8 +1,6 @@
 import React from 'react';
 import Header1 from './header/header';
 import Category from './category/category';
-import SignUpModal from './header/signup/signupModal'
-import LoginModal from './header/login/loginModal'
 import Collection from './collection/collection';
 import Localities from './localities/localities';
 import ZomatoApp from './app/app';
@@ -13,8 +11,6 @@ export default function Home() {
   return (
     <div>
       <Header1 />
-      <SignUpModal />
-      <LoginModal />
       <Category />
       <Collection />
       <Localities />

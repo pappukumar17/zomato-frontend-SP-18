@@ -11,6 +11,8 @@ import { AiOutlineClose } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import LoginModal from "../../common/modal/login/loginModal";
+import SignupModal from "../../common/modal/signup/signupModal";
 
 
 export default function Header() {
@@ -100,16 +102,28 @@ export default function Header() {
                             {
                                 loggedInUser ? <NavLink className={"navbar-element"} onClick={handleLogout}>Logout</NavLink> :
                                     <>
-                                        <ul className="login-elements-ul">
-                                            <li>
-                                                <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#login" >Log in</NavLink>
+                                        <ul className="homepage-login-elements-ul">
+                                            <li className="homepage-login-elements-ul-1">
+                                                <LoginModal login={{
+                                                    margin: 0,
+                                                    textAlign: "center",
+                                                    backgroundColor: "transparent",
+                                                    borderbottom: "none",
+                                                    letterSpacing: "0.08em",
+
+                                                }} />
                                             </li>
-                                            <li>
-                                                <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#signup" >Sign up</NavLink>
+                                            <li className="contact-login-elements-ul-2">
+                                                <SignupModal signup={{
+                                                    margin: 0,
+                                                    textAlign: "center",
+                                                    backgroundColor: "transparent",
+                                                    border: "none",
+                                                    letterSpacing: "0.08em"
+                                                }}  />
                                             </li>
                                         </ul>
                                     </>
-
                             }
 
                         </li>

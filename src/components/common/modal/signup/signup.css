@@ -1,6 +1,13 @@
 /* CSS FOR SIGNUP FORM*/
 
-.signup-form{
+.ant-modal-title {
+    font-size: 30px !important;
+    letter-spacing: 0.04em;
+    color: #4f4f4f !important;
+    font-weight: 450;
+}
+
+.signup-form {
     width: 100%;
     margin: 0 auto;
 }
@@ -40,8 +47,4 @@
 
 .signup-button:hover {
     color: rgb(232, 50, 71);
-}
-
-.ant-message{
-    z-index: 9999;
 }

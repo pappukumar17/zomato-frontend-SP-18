@@ -10,6 +10,8 @@ import './header.css'
 import './responsive.css'
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import LoginModal from "../../common/modal/login/loginModal";
+import SignupModal from "../../common/modal/signup/signupModal";
 
 
 const Header1 = () => {
@@ -58,7 +60,7 @@ const Header1 = () => {
             }
 
         } catch (e) {
-            // console.log('e', e.response.data.message);
+            console.log('e', e.response.data.message);
             messageApi.error({
                 content: e.response?.data?.message || 'Something went wrong!',
                 duration: 5
@@ -111,11 +113,25 @@ const Header1 = () => {
                                     loggedInUser ? <NavLink className={"navbar-element"} onClick={handleLogout}>Logout</NavLink> :
                                         <>
                                             <ul className="contact-login-elements-ul">
-                                                <li>
-                                                    <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#login" >Log in</NavLink>
+                                                <li className="contact-login-elements-ul-1">
+                                                    <LoginModal login={{
+                                                        margin: 0,
+                                                        textAlign: "center",
+                                                        backgroundColor: "transparent",
+                                                        border: "1px solid #4f4f4f",
+                                                        color: "#4f4f4f",
+                                                        letterSpacing: "0.08em"
+                                                    }} />
                                                 </li>
-                                                <li>
-                                                    <NavLink className={"navbar-element"} data-bs-toggle="modal" data-bs-target="#signup" >Sign up</NavLink>
+                                                <li className="contact-login-elements-ul-2">
+                                                    <SignupModal signup={{
+                                                        margin: 0,
+                                                        textAlign: "center",
+                                                        backgroundColor: "transparent",
+                                                        border: "1px solid #4f4f4f",
+                                                        color: "#4f4f4f",
+                                                        letterSpacing: "0.08em",
+                                                    }} />
                                                 </li>
                                             </ul>
                                         </>

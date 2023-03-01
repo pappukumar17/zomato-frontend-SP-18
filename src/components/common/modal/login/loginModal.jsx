@@ -1,22 +1,25 @@
-import { Button, Modal, Form, Input, message, Divider} from 'antd';
-import { useState} from 'react';
+import { Button, Modal, Form, Input, message, Divider, Typography } from 'antd';
+import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './login.css'
+import './responsive.css'
 
 
-const LoginModal1 = () => {
+const LoginModal = (props) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [messageApi, contextHolder] = message.useMessage();
     const [form] = Form.useForm();
     let navigate = useNavigate();
+
     const showModal = () => {
         setIsModalOpen(true);
     };
     const handleOk = () => {
         setIsModalOpen(false);
     };
+    
     const handleCancel = () => {
         setIsModalOpen(false);
     };
@@ -29,17 +32,20 @@ const LoginModal1 = () => {
         try {
             const response = await axios.post('http://localhost:4000/customers/login', values)
             console.log('response', response);
-            console.log('response', response.data?.message)
-
-            if (response.status === 201) {
-                messageApi.success({
-                    content: response.data?.message,
-                    duration: 5
-                })
-                navigate("/contactus")
+            
+            const token = response.data.data.token;
+            
+            if (response.status === 200) {
+                localStorage.setItem('token', token);
+                navigate(0)
             }
-            form.resetFields();
+            messageApi.success({
+                content: response.data?.message || "You have been successfully loggedin!",
+                duration: 5
+            });
+            form.resetFields()
             handleOk()
+            
         } catch (e) {
             console.log('e', e.response.data.message);
             messageApi.error({
@@ -48,15 +54,36 @@ const LoginModal1 = () => {
             });
         }
     };
+
+    const validateEmailOrPhone = (_, newValue) => {
+        const newFormValues = form.getFieldsValue();
+        // console.log("_, values", _, newValue);
+        if (_.field === 'email') {
+            if (newValue) {
+                form.resetFields(["phone"]);
+            }
+        } else if (_.field === 'phone') {
+            if (newValue) {
+                form.resetFields(["email"]);
+            }
+        }
+        if (!newFormValues.email && !newFormValues.phone) {
+            return Promise.reject('Please enter either a phone or an email');
+        }
+        return Promise.resolve();
+    };
+
     return (
         <>
-            <Button type="primary" onClick={showModal}>
+            <Button type="primary" onClick={showModal}
+                style={props.login}
+                size="large">
                 Login
             </Button>
             <Modal title="Login" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} footer={null} className="modal-title" >
-            <Divider type="horizontal"/>
-                {contextHolder}
+                <Divider type="horizontal" />
                 <div className="form-container">
+                {contextHolder}
                     <Form
                         size="large"
                         wrapperCol={{
@@ -72,32 +99,30 @@ const LoginModal1 = () => {
                         onFinishFailed={onFinishFailed}
                         autoComplete="on"
                         className='contact-login-form'
-
                         form={form}
                     >
 
                         <Form.Item
                             name="email"
                             rules={[
-                                {
-                                    required: true,
-                                    message: 'Please enter your Email Address!',
-                                },
+                                { type: "email", message: "Please enter a valid email!" },
+                                { validator: validateEmailOrPhone },
                             ]}
                         >
                             <Input placeholder='Email' />
                         </Form.Item>
-
+                        <Divider />
+                        <Typography.Title level={4} style={{ margin: 0, textAlign: "center", color: "#4f4f4f" }}>
+                            OR
+                        </Typography.Title>
+                        <Divider />
                         <Form.Item
                             name="phone"
                             rules={[
-                                {
-                                    required: true,
-                                    message: 'Please enter your Phone No.!',
-                                },
+                                { validator: validateEmailOrPhone }
                             ]}
                         >
-                            <Input placeholder='Phone' />
+                            <Input placeholder='Phone' type='number' />
                         </Form.Item>
 
                         <Form.Item
@@ -123,9 +148,9 @@ const LoginModal1 = () => {
                                 Log In
                             </Button>
                             <div className="checbox-1">
-                            <label type="text" className="already-login">New to Zomato?
-                                <Link to="/" className="login-button">Create Account</Link>
-                            </label>
+                                <label type="text" className="already-login">New to Zomato?
+                                    <Link to="/" className="login-button">Create Account</Link>
+                                </label>
                             </div>
                         </Form.Item>
                     </Form>
@@ -135,4 +160,4 @@ const LoginModal1 = () => {
         </>
     );
 };
-export default LoginModal1;
+export default LoginModal;

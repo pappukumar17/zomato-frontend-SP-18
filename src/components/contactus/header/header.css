@@ -124,16 +124,18 @@
     font-weight: 300;
     font-style: normal;
     letter-spacing: 0.04em;
+    padding: 8px 8px;
 }
 
 .contact-nav-elements a.active {
     color: #4f4f4f;
     position: relative;
+    border: 1px solid #4f4f4f;
+    border-radius: 7px;
 }
 
 .contact-nav-elements a.active:hover {
     color: #4f4f4f;
-    border-bottom: 2px solid #4f4f4f;
 }
 
 .contact-app-heading {
@@ -147,6 +149,13 @@
     display: none;
 }
 
-.contact-login-elements-ul{
+.contact-login-elements-ul {
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 0;
+}
+
+.contact-login-elements-ul-1 {
+    margin-right: 8%;
 }

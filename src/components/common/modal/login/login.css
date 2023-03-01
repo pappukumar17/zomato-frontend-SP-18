@@ -1,8 +1,10 @@
-/* CSS FOR SIGNUP FORM*/
+/* CSS FOR LOGIN FORM*/
 
-.signup-form{
-    width: 100%;
-    margin: 0 auto;
+.ant-modal-title {
+    font-size: 30px !important;
+    letter-spacing: 0.04em;
+    color: #4f4f4f !important;
+    font-weight: 450;
 }
 
 .checkbox-heading {
@@ -16,28 +18,34 @@
     color: rgb(241, 79, 98);
 }
 
-.create-account {
+.login-account {
     width: 100%;
     color: white;
     background-color: #EF4F5F;
     border-radius: 10px;
+    font-size: 22px;
 }
 
-.create-account:hover {
+.login-account:hover {
     background-color: rgb(232, 50, 71);
 }
 
-.already {
+.already-login {
+    margin-top: 3%;
     font-size: 18px !important;
     letter-spacing: 0.03em;
-    margin-top: 2%;
+    color: #4f4f4f;
+    width: 100%;
 }
 
-.signup-button {
+.login-button {
     text-decoration: none;
     color: rgb(241, 79, 98);
+    font-size: 18px !important;
+    letter-spacing: 0.03em;
 }
 
-.signup-button:hover {
+.login-button:hover {
     color: rgb(232, 50, 71);
 }
+
