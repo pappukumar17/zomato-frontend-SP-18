@@ -20,6 +20,8 @@ export default function Header() {
     const [messageApi, contextHolder] = message.useMessage();
     let navigate = useNavigate();
     const [loggedInUser, setLoggedInUser] = useState("");
+    const [searchTerm, setSearchTerm] = useState("");
+
 
     useEffect(() => {
         const loggUser = localStorage.getItem("token");
@@ -27,13 +29,25 @@ export default function Header() {
 
     }, []);
 
+    const words = [
+        "axios",
+        "axiom",
+        "axiomatic",
+        "axion",
+        "axinite",
+        "axiological",
+        "axiomatic",
+      ];
+
     const handleShowNavbar = () => {
         setShowNavbar(!showNavbar)
     }
 
-    const searchHandle = async (event) => {
-        await fetch(`http://localhost:4000/customers/menu`)
-    }
+
+    const filteredWords = words.filter((word) =>
+        word.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
 
     const handleLogout = async (e) => {
         e.preventDefault()
@@ -120,7 +134,7 @@ export default function Header() {
                                                     backgroundColor: "transparent",
                                                     border: "none",
                                                     letterSpacing: "0.08em"
-                                                }}  />
+                                                }} />
                                             </li>
                                         </ul>
                                     </>
@@ -148,9 +162,18 @@ export default function Header() {
                         }} />
                         <div className="search-item-2">
                             <BsSearch size={20} className="location-marker" />
-                            <input type="text" placeholder="Search for restaurant, cuisine or a dish" className='search-para-2' onChange={searchHandle} />
+                            <input type="text" placeholder="Search for restaurant, cuisine or a dish" className='search-para-2'
+                                value={searchTerm}
+                                onChange={(event) => setSearchTerm(event.target.value)}
+                            />
+
                         </div>
                     </div>
+                        <ul>
+                            {filteredWords.map((word, index) => (
+                                <li key={index}>{word}</li>
+                            ))}
+                        </ul>
                 </div>
             </div>
         </div>
