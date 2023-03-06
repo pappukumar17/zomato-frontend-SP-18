@@ -36,17 +36,18 @@ function ZomatoApp() {
                             </div>
                             <p className="download-app">Download app from</p>
                             <div className="download-link-1">
-                        <div className="android">
-                            <Link to="https://play.google.com/store/apps/details?id=com..application.zomato&_branch_match_id=1144157600425835932&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT8pL1ssp0U%2FJL8%2FLyU9M0a3STcxLKcrPTAEABp6kzyEAAAA%3D">
-                                <img className="android-image-1" src={"https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png"} alt="" />
-                            </Link>
-                        </div>
-                        <div className="ios">
-                            <Link to="https://play.google.com/store/apps/details?id=com..application.zomato&_branch_match_id=1144157600425835932&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT8pL1ssp0U%2FJL8%2FLyU9M0a3STcxLKcrPTAEABp6kzyEAAAA%3D" target="_blank"><img className="ios-image-1" src={"https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png"} alt="" />
-                            </Link>
+                                <div className="android">
+                                    <Link to="https://bnc.lt/download-z-android" target="_blank">
+                                        <img className="android-image-1" src={"https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png"} alt="" />
+                                    </Link>
+                                </div>
+                                <div className="ios">
+                                    <Link to="https://bnc.lt/download-zomato-ios" target="_blank">
+                                        <img className="ios-image-1" src={"https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png"} alt="" />
+                                    </Link>
 
-                        </div>
-                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

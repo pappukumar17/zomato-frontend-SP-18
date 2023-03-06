@@ -577,11 +577,6 @@
         width: 20%;
     }
 
-    /* .menu-icon-bs {
-        position: absolute;
-        font-weight: bold;
-    } */
-
     .contact-navbar {
         width: 100%;
     }
@@ -590,43 +585,8 @@
         display: block;
     }
 
-
-    .contact-nav-elements {
-        position: absolute;
-        left: 0;
-        top: 0px;
-        width: 0px;
-        overflow-x: hidden !important;
-        transform: rotate(0deg);
-        transition: transform 0.16s ease-in-out 0s;
-        display: flex;
-        flex-direction: column;
-        padding-left: 1%;
-    }
-
-    .contact-nav-elements a {
-        text-decoration: none;
-        font-size: 19px;
-        font-weight: 300;
-        font-style: normal;
-        letter-spacing: 0.04em;
-    }
-
-    .contact-nav-elements a.Active {
-        color: #4f4f4f;
-        font-weight: 350;
-        font-size: 18px;
-    }
-
     .contact-nav-elements li {
         color: white;
-    }
-
-    .Active {
-        width: 100%;
-        background-color: white;
-        height: 44vh;
-        padding-left: 4%;
     }
 
     .contact-li-1 {
@@ -640,10 +600,42 @@
     .contact-search {
         display: none;
     }
+    .contact-login-elements-ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-nav-elements li{
+        /* width: 100%; */
+        padding-left: 4%;
+        /* margin-bottom: 75px; */
+    }
+
+    .navbar-elements {
+        display: none;
+    }
+
+    .mbl_nav {
+        background-color: white;
+        height: 16vh;
+        display: flex;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .login-span{
+        color: black;
+    }
 
     .contact-login-elements-ul{
         display: flex;
         flex-direction: column;
-        gap: 55px;
+        justify-content: center;
+        gap: 10px;
     }
 }

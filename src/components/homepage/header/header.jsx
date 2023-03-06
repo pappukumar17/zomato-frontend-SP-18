@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import './header.css'
 import './responsive.css'
 import '../../../index.css'
 import { NavLink } from 'react-router-dom';
-import { Divider, message } from 'antd';
+import { Divider, message, Card } from 'antd';
 import { HiLocationMarker } from "react-icons/hi";
 import { MdOutlineAppSettingsAlt } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
@@ -13,52 +13,63 @@ import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import LoginModal from "../../common/modal/login/loginModal";
 import SignupModal from "../../common/modal/signup/signupModal";
+import debounce from 'lodash.debounce';
+import jwt from 'jwt-decode'
 
 
 export default function Header() {
     const [showNavbar, setShowNavbar] = useState(false)
     const [messageApi, contextHolder] = message.useMessage();
-    let navigate = useNavigate();
-    const [loggedInUser, setLoggedInUser] = useState("");
+    const [loggedInUser, setLoggedInUser] = useState(false);
     const [searchTerm, setSearchTerm] = useState("");
-
+    const [searchResults, setSearchResults] = useState([]);
+    let navigate = useNavigate();
 
     useEffect(() => {
         const loggUser = localStorage.getItem("token");
-        setLoggedInUser(loggUser)
-
+        setLoggedInUser(loggUser);
     }, []);
-
-    const words = [
-        "axios",
-        "axiom",
-        "axiomatic",
-        "axion",
-        "axinite",
-        "axiological",
-        "axiomatic",
-      ];
 
     const handleShowNavbar = () => {
         setShowNavbar(!showNavbar)
     }
 
+    function decodeJwt(token) {
+        try {
+            const decoded = jwt.decode(token);
+            return decoded;
+        } catch (error) {
+            console.error(error);
+            return null;
+        }
+    }
 
-    const filteredWords = words.filter((word) =>
-        word.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-
+    const handleSearch = debounce((newValue) => {
+        if (newValue) {
+            axios.get(`http://localhost:4000/customers/menu?itemName=${newValue}`)
+                .then(response => {
+                    console.log(response)
+                    setSearchResults(response.data?.data || []);
+                })
+                .catch(error => {
+                    console.log("e", error)
+                });
+        } else {
+            setSearchResults([]);
+        }
+    }, 800);
 
     const handleLogout = async (e) => {
-        e.preventDefault()
         try {
             const token = localStorage.getItem('token');
             if (!token) {
                 messageApi.success({
-                    content: "Please login first!",
+                    content: "You have been successfully logged Out!",
                     duration: 5
                 });
+                navigate(0)
             } else {
+                console.log(e)
                 const api = axios.create({
                     baseURL: 'http://localhost:4000/customers',
                     headers: {
@@ -66,7 +77,10 @@ export default function Header() {
                     },
                 });
                 await api.post('/logout');
-                localStorage.removeItem('token');
+                const token = localStorage.removeItem('token');
+                const decodedData = decodeJwt(token);
+                console.log(decodedData);
+
                 messageApi.success({
                     content: e.response?.data?.message || "You have been successfully logged Out!",
                     duration: 5
@@ -75,11 +89,11 @@ export default function Header() {
             }
 
         } catch (e) {
-            // console.log('e', e.response.data.message);
-            messageApi.error({
-                content: e.response?.data?.message || 'Something went wrong!',
+            messageApi.success({
+                content: "You have been successfully logged Out!",
                 duration: 5
             });
+            navigate(0)
         }
     };
 
@@ -93,13 +107,13 @@ export default function Header() {
                     </div>
                     <ul className="app-logo-section">
                         <li>
-                            <NavLink className={"app-logo-name"}><MdOutlineAppSettingsAlt /> Get the app</NavLink>
+                            <NavLink to="https://bnc.lt/download-z-android" target="_blank" className={"app-logo-name"}><MdOutlineAppSettingsAlt /> Get the app</NavLink>
                         </li>
                     </ul>
                     <ul className={`navbar-elements ${showNavbar && 'mbl_nav'}`}>
                         <li className='homepage-li-1'>
                             <NavLink>
-                                <div className="homepage-menu-icon" onClick={handleShowNavbar}>
+                                <div className="homepage-menu-icon-1" onClick={handleShowNavbar}>
                                     <AiOutlineClose color="black" size={22} className='menu-icon-bs' />
                                 </div>
                             </NavLink>
@@ -109,7 +123,7 @@ export default function Header() {
                                 <img className='homepage-navlink-image-2' src={"https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"} alt="hello" />
                             </NavLink>
                         </li>
-                        <li>
+                        <li className="navbar-element-res">
                             <NavLink className={"navbar-element"} to="/signup">Add restaurant</NavLink>
                         </li>
                         <li className="login-elements">
@@ -127,14 +141,14 @@ export default function Header() {
 
                                                 }} />
                                             </li>
-                                            <li className="contact-login-elements-ul-2">
+                                            <li className="homepage-login-elements-ul-2">
                                                 <SignupModal signup={{
                                                     margin: 0,
                                                     textAlign: "center",
                                                     backgroundColor: "transparent",
                                                     border: "none",
                                                     letterSpacing: "0.08em"
-                                                }} />
+                                                }} className="login-span"/>
                                             </li>
                                         </ul>
                                     </>
@@ -164,18 +178,36 @@ export default function Header() {
                             <BsSearch size={20} className="location-marker" />
                             <input type="text" placeholder="Search for restaurant, cuisine or a dish" className='search-para-2'
                                 value={searchTerm}
-                                onChange={(event) => setSearchTerm(event.target.value)}
+                                onChange={(event) => {
+                                    setSearchTerm(event.target.value);
+                                    handleSearch(event.target.value);
+                                }}
                             />
 
                         </div>
                     </div>
-                        <ul>
-                            {filteredWords.map((word, index) => (
-                                <li key={index}>{word}</li>
-                            ))}
-                        </ul>
+                    <ul>
+                        {
+                            Array.isArray(searchResults) && searchResults.map(object => (
+                                <Fragment key={object.id}>
+                                    <Card
+                                        style={{
+                                            width: "100%",
+                                            display: "flex",
+                                            justifyContent: "left",
+                                            alignItems:"center"
+                                        }}
+                                    >
+                                        <p>{object.categoryName}</p>
+                                        <p>{object.itemName}</p>
+                                        <p>{object.itemDescription}</p>
+                                    </Card>
+                                </Fragment>
+                            ))
+                        }
+                    </ul>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }

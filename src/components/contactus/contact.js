@@ -7,11 +7,11 @@ import Header1 from './header/header'
 
 export default function Contact() {
     return (
-        <div>
+        <>
             <Header1 />
             <Midsection />
             <Body />
             <Footer />
-        </div>
+        </>
     )
 }

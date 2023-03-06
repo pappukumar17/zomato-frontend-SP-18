@@ -79,8 +79,7 @@
 }
 
 .anchor:hover {
-    transform: scale(1.03, 1.03);
-    width: 32%;
+    transform: scale(1.009, 1.003);
     -webkit-transition: width all 0.2s ease;
     -moz-transition: width all 0.2s ease;
     transition: all 0.2s ease;

@@ -12,6 +12,7 @@
     background-position: center;
     background-repeat: no-repeat;
     transform: scale(1.1);
+    background-size: cover;
 }
 
 .homepage-header-1 {
@@ -30,6 +31,7 @@
     font-weight: 500;
     color: white;
     display: block;
+    cursor: pointer;
 }
 
 .app-logo-name:hover {

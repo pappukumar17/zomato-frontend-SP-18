@@ -35,14 +35,14 @@ const Header1 = () => {
     }
 
     const handleLogout = async (e) => {
-        e.preventDefault()
         try {
             const token = localStorage.getItem('token');
             if (!token) {
                 messageApi.success({
-                    content: "Please login first!",
+                    content: "You have been successfully logged Out!",
                     duration: 5
                 });
+                navigate(0)
             } else {
                 const api = axios.create({
                     baseURL: 'http://localhost:4000/customers',
@@ -60,11 +60,11 @@ const Header1 = () => {
             }
 
         } catch (e) {
-            console.log('e', e.response.data.message);
-            messageApi.error({
-                content: e.response?.data?.message || 'Something went wrong!',
+            messageApi.success({
+                content: "You have been successfully logged Out!",
                 duration: 5
             });
+            navigate(0)
         }
     };
 
@@ -95,7 +95,7 @@ const Header1 = () => {
                                 <input type="text" placeholder="Search for restaurant, cuisine or a dish" className='contact-search-para-2' onChange={searchHandle} />
                             </div>
                         </ul>
-                        <ul className={`contact-nav-elements  ${showNavbar && 'Active'}`}>
+                        <ul className={`navbar-elements ${showNavbar && 'mbl_nav'}`}>
                             <li className='contact-li-1'>
                                 <NavLink>
                                     <div className="contact-menu-icon" onClick={handleShowNavbar}>
@@ -108,7 +108,7 @@ const Header1 = () => {
                                     <img className='contact-navlink-image-2' src={"https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"} alt="hello" />
                                 </NavLink>
                             </li>
-                            <li className="login-elements">
+                            <li className="contact-login-elements">
                                 {
                                     loggedInUser ? <NavLink className={"navbar-element"} onClick={handleLogout}>Logout</NavLink> :
                                         <>
@@ -116,7 +116,7 @@ const Header1 = () => {
                                                 <li className="contact-login-elements-ul-1">
                                                     <LoginModal login={{
                                                         margin: 0,
-                                                        textAlign: "center",
+                                                         textAlign: "center",
                                                         backgroundColor: "transparent",
                                                         border: "1px solid #4f4f4f",
                                                         color: "#4f4f4f",

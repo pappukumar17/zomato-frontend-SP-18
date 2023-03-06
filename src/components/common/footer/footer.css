@@ -84,6 +84,7 @@
     justify-content: left;
     flex-direction: column;
     width: 20%;
+    gap: 5px;
 }
 
 .zomaverse {
@@ -91,6 +92,7 @@
     justify-content: left;
     flex-direction: column;
     width: 15%;
+    gap: 5px;
 }
 
 .places {
@@ -101,6 +103,7 @@
     display: flex;
     justify-content: left;
     flex-direction: column;
+    gap: 5px;
 }
 
 .enterprises {
@@ -108,6 +111,7 @@
     justify-content: left;
     flex-direction: column;
     margin-top: 4%;
+    gap: 5px;
 }
 
 .learn-more {
@@ -115,6 +119,7 @@
     justify-content: left;
     flex-direction: column;
     width: 15%;
+    gap: 5px;
 }
 
 .social-links {
@@ -126,6 +131,9 @@
 .links {
     width: 100%;
     transform: scale(1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-link {

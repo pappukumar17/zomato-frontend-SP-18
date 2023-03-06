@@ -26,13 +26,10 @@ const SignupModal = (props) => {
 
     const onFinish = async (values) => {
         console.log('Received values of form: ', values);
-        form.setFieldsValue({
-            myCheckbox: true,
-        });
         try {
             const response = await axios.post('http://localhost:4000/customers/create', values)
-            // console.log('response', response);
-            // console.log('response', response.data?.message)
+            console.log('response', response);
+            console.log('response', response.data?.message)
 
             if (response.status === 201) {
                 messageApi.success({
@@ -54,7 +51,7 @@ const SignupModal = (props) => {
         <>
             <Button type="primary" onClick={showModal}
                 style={props.signup}
-                size="large">
+                size="large" className='signup-span-mobile'>
                 Signup
             </Button>
             <Modal title="Signup" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} footer={null} className="modal-title" >
@@ -132,7 +129,15 @@ const SignupModal = (props) => {
                                 span: 25,
                             }}
                             rules={[
-                                { required: true, message: 'Please accept the terms and conditions' },
+                                {
+                                    validator: async (_, checked) => {
+                                        if (!checked) {
+                                            return Promise.reject(
+                                                new Error("Please accept our terms and conditions to register succesfully"),
+                                            );
+                                        }
+                                    },
+                                }
                             ]}
                         >
                             <Checkbox> I agree to Zomato's <Link className='checkbox-heading' to='/'> Terms of Service, Privacy Policy</Link> and <Link className='checkbox-heading' to='/'>Content Policies</Link></Checkbox>
@@ -148,7 +153,7 @@ const SignupModal = (props) => {
                             <Button type="primary" className='create-account' htmlType="submit">
                                 Create Account
                             </Button>
-                            <div className="form-check-1">
+                            <div className="checkbox-1">
                                 <label type="text" className="already">Already have an account? <Link to="/" className="signup-button">Log In</Link>
                                 </label>
                             </div>

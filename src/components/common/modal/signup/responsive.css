@@ -1,45 +1,56 @@
 @media (max-width:1400px) {
     /* CSS FOR SIGNUP FORM*/
-    
-    .signup-form{
+
+    .signup-form {
         width: 100%;
         margin: 0 auto;
     }
-    
+
     .checkbox-heading {
         color: rgb(241, 79, 98);
         font-weight: bold;
         text-decoration: none;
     }
-    
+
     .checkbox-heading:hover {
         background-color: white;
         color: rgb(241, 79, 98);
     }
-    
+
     .create-account {
         width: 100%;
         color: white;
         background-color: #EF4F5F;
         border-radius: 10px;
     }
-    
+
     .create-account:hover {
         background-color: rgb(232, 50, 71);
     }
-    
+
     .already {
         font-size: 18px !important;
         letter-spacing: 0.03em;
         margin-top: 2%;
     }
-    
+
     .signup-button {
         text-decoration: none;
         color: rgb(241, 79, 98);
     }
-    
+
     .signup-button:hover {
         color: rgb(232, 50, 71);
     }
+
+    .checbox-1 {
+        margin-top: 10px;
     }
+}
+
+@media (max-width:768px) {
+    
+    .signup-span-mobile {
+        color: black;
+    }
+}

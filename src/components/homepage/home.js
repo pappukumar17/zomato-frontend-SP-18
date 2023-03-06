@@ -9,7 +9,7 @@ import Footer from '../common/footer/footer';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Header1 />
       <Category />
       <Collection />
@@ -17,7 +17,9 @@ export default function Home() {
       <ZomatoApp />
       <CollapsePanel />
       <Footer />
-    </div>
+    </>
+
+
   )
 }
 

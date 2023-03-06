@@ -42,4 +42,15 @@
     .login-button:hover {
         color: rgb(232, 50, 71);
     }
+
+    .checkbox-1 {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width:768px) {
+    
+    .login-span-mobile {
+        color: black;
+    }
 }
